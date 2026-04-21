@@ -1,0 +1,419 @@
+{
+  "metadata": {
+    "title": "Back Software | Sitios Web, Marketing y Software a Medida - Ivrea (TO)",
+    "description": "Agencia digital en Ivrea (Turín). Creamos sitios web profesionales, campañas Meta/Google Ads, software de gestión a medida, servicios de foto y vídeo. Soluciones concretas para hacer crecer tu negocio.",
+    "ogTitle": "Back Software | Sitios Web, Marketing y Software a Medida",
+    "ogDescription": "Tecnología que simplifica, no complica. Construimos tu proyecto como si fuera el nuestro. Agencia digital en Ivrea, Turín."
+  },
+  "seo": {
+    "keywords": [
+      "sitios web Ivrea", "agencia web Turín", "marketing digital",
+      "software a medida", "sitios web empresariales", "Meta Ads", "Google Ads",
+      "desarrollo de sitios web", "sistemas de gestión personalizados", "foto vídeo empresarial",
+      "desarrollo web Piamonte", "agencia web Canavese"
+    ]
+  },
+  "breadcrumbs": {
+    "home": "Inicio"
+  },
+  "nav": {
+    "brandName": "Back Software",
+    "brandTagline": "Estudio digital a medida",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "arcade": "Zona Arcade",
+    "writeUs": "Escríbenos"
+  },
+  "hero": {
+    "title1": "Software que",
+    "title2": "funciona.",
+    "title3": "Hecho por ",
+    "title3Highlight": "personas reales",
+    "subtitle": "Tecnología que simplifica, no complica. Construimos tu proyecto como si fuera el nuestro.",
+    "ctaMobile": "Hablemos →",
+    "ctaDesktop": "Cuéntanos tu proyecto →",
+    "visualCaption": "Desplázate hacia abajo para continuar",
+    "visualPointerHint": "Escritorio: sigue con el ratón y haz clic — el efecto cambia según dónde pulses"
+  },
+  "whyUs": {
+    "title": "Por qué Back Software.",
+    "subtitle": "No somos solo desarrolladores. Somos socios que entienden tu negocio.",
+    "cards": {
+      "01": {
+        "title": "Escucha",
+        "desc": "Antes de escribir código, escuchamos. Entender el problema es más importante que la solución técnica."
+      },
+      "02": {
+        "title": "Claridad",
+        "desc": "Nada de jerga incomprensible. Te lo explicamos todo de forma sencilla, sin sorpresas."
+      },
+      "03": {
+        "title": "Resultados",
+        "desc": "No vendemos proyectos, vendemos soluciones que realmente funcionan en el mundo real."
+      }
+    }
+  },
+  "services": {
+    "title": "Qué hacemos.",
+    "subtitle": "Soluciones concretas para problemas reales.",
+    "caseFamiglia": {
+      "title": "Hogares Familiares",
+      "desc": "Paquetes completos para estructuras que acogen familias en dificultad.",
+      "details": "Servicio dedicado a estructuras que acogen familias en dificultad. Gestionamos todo: sitio web, redes sociales, campañas publicitarias dirigidas y sistema de reservas.",
+      "packages": {
+        "6mesi": { "name": "6 Meses", "desc": "Solución completa por 6 meses: web, redes, campañas y reservas" },
+        "3mesi": { "name": "3 Meses", "desc": "Solución completa por 3 meses: web, redes, campañas y reservas" },
+        "spot": { "name": "Campaña Spot", "desc": "Campaña spot por 6 meses con gestión completa" }
+      }
+    },
+    "sitiLanding": {
+      "title": "Sitios y Landing",
+      "desc": "Sitios web profesionales y landing pages optimizadas para conversiones.",
+      "details": "Sitios web profesionales y landing pages optimizadas para conversiones. Desde sitios corporativos completos hasta landing pages específicas, todo responsive y listo para Google.",
+      "packages": {
+        "5-10": { "name": "Sitio 5-10 Páginas", "desc": "Sitio web completo con 5-10 páginas, responsive y optimizado" },
+        "landing": { "name": "Landing Page", "desc": "Landing page optimizada para conversiones y generación de leads" }
+      }
+    },
+    "marketing": {
+      "title": "Marketing y ADS",
+      "desc": "Análisis, Meta Ads y Google Ads. Estrategias que dan resultados.",
+      "details": "Estrategias de marketing digital y campañas publicitarias dirigidas. Análisis, planificación y gestión completa de tus campañas en Meta y Google.",
+      "packages": {
+        "analisi": { "name": "Análisis Marketing", "desc": "Análisis completo para campañas publicitarias efectivas" },
+        "meta": { "name": "Meta Ads", "desc": "Campañas en Meta y otros canales sociales" },
+        "google": { "name": "Google Ads", "desc": "Campañas publicitarias en Google Search y Display" }
+      }
+    },
+    "fotoVideo": {
+      "title": "Foto y Vídeo",
+      "desc": "Servicios fotográficos y de vídeo profesionales para tu empresa.",
+      "details": "Servicios profesionales de fotografía y vídeo para tu empresa. Sesiones fotográficas, rodajes con drone, vídeos corporativos y contenidos para redes.",
+      "packages": {
+        "foto": { "name": "Servicio Fotográfico", "desc": "Servicios fotográficos profesionales para empresas y productos" },
+        "drone": { "name": "Vídeo Drone", "desc": "Rodajes aéreos con drone profesional" },
+        "staff": { "name": "Vídeo Staff", "desc": "Rodajes de vídeo con equipo profesional" }
+      }
+    },
+    "graficaCopy": {
+      "title": "Diseño y Copy",
+      "desc": "Diseño gráfico y copywriting para tu comunicación.",
+      "details": "Servicios de diseño gráfico y copywriting para tu comunicación. Logotipos, identidad visual, materiales gráficos y textos que hablan a tu público.",
+      "packages": {
+        "grafica": { "name": "Diseño", "desc": "Servicios de diseño gráfico, visual e identidad de marca" },
+        "copy": { "name": "Copywriting", "desc": "Servicios de escritura, comunicación y textos SEO" }
+      }
+    },
+    "software": {
+      "title": "Software a Medida",
+      "desc": "Sistemas de gestión, aplicaciones e integraciones API a medida.",
+      "details": "Soluciones digitales avanzadas para la gestión empresarial. Software a medida, sistemas de gestión, aplicaciones web/móviles e integraciones API.",
+      "packages": {
+        "gestionali": { "name": "Sistemas de Gestión", "desc": "Sistemas de gestión personalizados para tu empresa" },
+        "app": { "name": "Aplicaciones", "desc": "Aplicaciones web y móviles a medida" },
+        "api": { "name": "Conexión API", "desc": "Integraciones y conexiones API con otros servicios" }
+      }
+    }
+  },
+  "projects": {
+    "title": "Galería de Proyectos.",
+    "subtitle": "{{count}} Historias de Éxito Reales",
+    "categories": {
+      "all": "Todos",
+      "management": "Gestión",
+      "website": "Sitio Web",
+      "marketing": "Marketing",
+      "crm": "CRM"
+    },
+    "items": {
+      "cantina": {
+        "name": "Sistema de Gestión Bodega",
+        "desc": "Sistema de gestión vitivinícola completo para bodega con venta online de experiencias, gestión de cupones regalo y envíos internacionales.",
+        "tags": ["Gestión", "PWA", "E-commerce"]
+      },
+      "crmMagazzino": {
+        "name": "CRM Almacén",
+        "desc": "Sistema de gestión a medida para gestión de almacén, almacenamiento y envíos con optimización logística avanzada.",
+        "tags": ["Gestión", "Logística"]
+      },
+      "bpres": {
+        "name": "BPres Asistencia",
+        "desc": "Sistema de asistencia completo para gestionar entradas, salidas y pausas. Cálculo de permisos automáticos y solicitud de vacaciones/enfermedad con aprobación por email.",
+        "tags": ["Gestión", "RRHH"]
+      },
+      "autodemolizioni": {
+        "name": "Sistema de Desguace",
+        "desc": "CRM completo para trámites de saneamiento, registro en portales estatales, API Rentri, venta de componentes, gestión de depósitos y control de códigos CER.",
+        "tags": ["CRM", "API", "Compliance"]
+      },
+      "sevenLakes": {
+        "name": "7Lakes Aparthotel",
+        "desc": "Sitio web con tomas de drone para tour virtual, conexión Octorate para motor de reservas centralizado con Booking.com y Airbnb.",
+        "tags": ["Sitio Web", "Reservas", "Drone"]
+      },
+      "saluteDomicilio": {
+        "name": "Salute a Domicilio",
+        "desc": "Sitio web, análisis de marketing intelligence, landing pages publicitarias y campañas Google Search + retargeting social.",
+        "tags": ["Sitio Web", "Marketing", "ADS"]
+      },
+      "crmTask": {
+        "name": "CRM Tareas y Proyectos",
+        "desc": "Sistema de gestión para proyectos, tareas y progreso de trabajos. Gestión de clientes y colaboradores con integración IA vía API.",
+        "tags": ["Gestión", "IA", "Project"]
+      },
+      "myPlace": {
+        "name": "My Place Malpensa",
+        "desc": "Sitio web multilingüe con conexión a Octorate para motor de reservas centralizado y gestión automatizada de reservas.",
+        "tags": ["Sitio Web", "Reservas", "Multilingüe"]
+      },
+      "marazzato": {
+        "name": "Marazzato Moto",
+        "desc": "Sitio web escaparate con carga dinámica de productos desde panel dedicado y escaparate online para venta de motos y accesorios.",
+        "tags": ["Sitio Web", "Escaparate", "E-commerce"]
+      },
+      "villaKatia": {
+        "name": "Hogar Familiar Villa Katia",
+        "desc": "Solución completa: sitio web, landing page y campañas Meta Ads con foco en Facebook y target de referencia específico.",
+        "tags": ["Marketing", "Meta Ads", "Landing"]
+      },
+      "quercia": {
+        "name": "Hogar Familiar Quercia",
+        "desc": "Sitio web, landing page y campañas patrocinadas Meta Ads para hogar familiar con estrategia de marketing dirigida.",
+        "tags": ["Marketing", "Meta Ads", "Social"]
+      },
+      "gramsci": {
+        "name": "Hogar Familiar Gramsci",
+        "desc": "Proyecto completo con sitio web institucional, landing pages dedicadas y campañas publicitarias sociales dirigidas.",
+        "tags": ["Marketing", "Social", "Landing"]
+      },
+      "benissimo": {
+        "name": "Hogar Familiar Benissimo",
+        "desc": "Desarrollo de sitio web, landing pages optimizadas y estrategia de marketing digital con campañas Facebook Ads dirigidas.",
+        "tags": ["Marketing", "Facebook Ads", "Web"]
+      },
+      "anziani": {
+        "name": "Residencia Social de Ancianos",
+        "desc": "Residencia social para ancianos en Abbiategrasso: sitio web institucional, landing page y campañas de marketing dedicadas.",
+        "tags": ["Marketing", "Web", "Social"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Hablemos de tu futuro.",
+    "subtitle": "Cuéntanos tu proyecto. Primero analizamos, luego te decimos qué realmente necesitas.",
+    "formCta": "Rellenar el formulario",
+    "email": "Email",
+    "callUs": "O llámanos:",
+    "writeUs": "Escríbenos",
+    "form": {
+      "title": "Escríbenos",
+      "subtitle": "Respondemos en 24 horas.",
+      "step1": {
+        "title": "Tus datos",
+        "name": "Nombre",
+        "company": "Nombre actividad/empresa (opcional)",
+        "email": "Email",
+        "prefix": "+39",
+        "phone": "Móvil",
+        "emailError": "Introduce una dirección de email válida (ej. nombre@empresa.com).",
+        "prefixError": "Prefijo no válido. Usa el formato internacional, por ejemplo +39.",
+        "phoneError": "Número no válido. Introduce de 6 a 14 dígitos.",
+        "phoneRequired": "Prefijo de país y móvil son obligatorios."
+      },
+      "step2": {
+        "title": "¿Qué necesitas?",
+        "services": {
+          "siti": "Sitios Web",
+          "marketing": "Marketing",
+          "foto": "Foto y Vídeo",
+          "grafica": "Diseño y Marca",
+          "software": "Software a Medida",
+          "casa": "Hogares Familiares",
+          "altro": "Otro"
+        }
+      },
+      "step3": {
+        "title": "Cuéntanos",
+        "placeholderDefault": "Cuéntanos brevemente qué necesitas...",
+        "placeholders": {
+          "siti": ["Tengo una actividad y necesito un sitio web...", "Querría un e-commerce para vender online...", "Necesito una landing page para un servicio..."],
+          "marketing": ["Querría más clientes con publicidad online...", "Necesito una estrategia social efectiva...", "Quiero promocionar una oferta específica..."],
+          "foto": ["Necesito fotos profesionales para el sitio...", "Querría un vídeo para presentar la empresa...", "Debo fotografiar productos para el catálogo..."],
+          "grafica": ["No tengo logo y querría empezar desde cero...", "Mi marca está anticuada, querría renovarla...", "Necesito una identidad visual completa..."],
+          "software": ["Gestiono todo con hojas de cálculo...", "Necesito un sistema de gestión a medida...", "Necesito una app web para reservas..."],
+          "casa": ["Gestiono una estructura y necesito reservas...", "Querría un sitio con reservas online...", "Necesito digitalizar la gestión..."],
+          "altro": ["Necesito varios servicios juntos...", "No sé qué necesito, querría hablarlo...", "Quiero un paquete completo..."]
+        }
+      },
+      "step4": {
+        "title": "Confirma y envía la solicitud",
+        "subtitle": "Último paso: elige el canal de envío. Pre-rellenamos el mensaje de forma ordenada y profesional.",
+        "contactCard": "Ficha de contacto",
+        "ready": "LISTA PARA ENVIAR",
+        "nameLabel": "Nombre:",
+        "companyLabel": "Empresa:",
+        "notSpecified": "No especificada",
+        "emailLabel": "Email:",
+        "phoneLabel": "Móvil:",
+        "serviceLabel": "Servicio:",
+        "descriptionLabel": "Descripción:",
+        "sendWhatsApp": "Enviar por WhatsApp",
+        "sendEmail": "Enviar por Email"
+      },
+      "back": "← Atrás",
+      "next": "Siguiente →",
+      "confirm": "Confirmar y enviar →"
+    }
+  },
+  "contactMessage": {
+    "subject": "Solicitud de presupuesto - {{service}} - {{name}}",
+    "header": "Nueva solicitud comercial",
+    "contactSection": "DATOS DE CONTACTO",
+    "nameLabel": "Nombre",
+    "companyLabel": "Actividad/Empresa",
+    "companyNotSpecified": "No especificada",
+    "emailLabel": "Email",
+    "phoneLabel": "Móvil",
+    "requestSection": "SOLICITUD",
+    "serviceLabel": "Servicio",
+    "descriptionSection": "DESCRIPCIÓN"
+  },
+  "serviceModal": {
+    "backToServices": "← Volver a servicios",
+    "backToProjects": "← Volver a proyectos",
+    "backToHome": "← Volver al inicio",
+    "choosePackage": "Elige el paquete:",
+    "requestQuote": "Solicitar presupuesto →",
+    "requestInfo": "Solicitar info",
+    "similarProject": "Solicitar proyecto similar",
+    "otherServices": "Otros servicios",
+    "otherProjects": "Otros proyectos",
+    "category": "Categoría"
+  },
+  "footer": {
+    "description": "Diseñamos y desarrollamos soluciones digitales con objetivos claros, plazos definidos y soporte continuo.",
+    "services": "Servicios",
+    "company": "Empresa",
+    "contacts": "Contacto",
+    "pec": "Email certificado:",
+    "address": "Ivrea (TO), Italia",
+    "close": "Cerrar pie de página",
+    "links": {
+      "howWeWork": "Cómo trabajamos",
+      "contacts": "Contacto",
+      "pricing": "Servicios y Precios",
+      "web": "Sitios Web",
+      "marketing": "Marketing",
+      "grafica": "Diseño",
+      "video": "Vídeo"
+    },
+    "copyright": "© {{year}} Back Software",
+    "vat": "IVA: IT13227980011",
+    "privacy": "Política de Privacidad",
+    "cookies": "Política de Cookies",
+    "terms": "Términos y Condiciones"
+  },
+  "legal": {
+    "privacyTitle": "Política de privacidad",
+    "privacyDescription": "Información sobre el tratamiento de datos personales y derechos de los interesados — Back Software.",
+    "cookiesTitle": "Política de cookies",
+    "cookiesDescription": "Uso de cookies y tecnologías similares en backsoftware.it — Back Software.",
+    "termsTitle": "Términos y Condiciones",
+    "termsDescription": "Condiciones generales para servicios digitales, software y marketing — Back Software.",
+    "backHome": "← Volver al inicio",
+    "relatedLabel": "Documentos relacionados",
+    "disclaimer": "Textos actualizados al 21 de abril de 2026: sin banner de cookies (solo herramientas de primera parte y cookies técnicas/necesarias). Revísalos periódicamente con tu asesor legal."
+  },
+  "terminal": {
+    "boot": {
+      "title": "BACK OS v2.0<br/>TERMINAL EDITION",
+      "loading": "INICIANDO SISTEMA..."
+    },
+    "apps": {
+      "oracle": "ORÁCULO MÁGICO",
+      "slot": "TRAGAPERRAS",
+      "excuse": "EXCUSAS",
+      "arcade": "SALA DE JUEGOS"
+    },
+    "games": {
+      "snake": "SNAKE",
+      "flappy": "FLAPPY",
+      "dino": "DINO RUN",
+      "space": "INVADERS"
+    },
+    "oracle": {
+      "title": "EL ORÁCULO MÁGICO DEL NEGOCIO",
+      "subtitle": "Escribe una duda sobre tu trabajo y consulta al Oráculo de Ivrea.",
+      "placeholder": "ej: ¿debería lanzar un e-commerce?",
+      "ask": "PREGUNTAR AL ORÁCULO",
+      "loading1": "[Conectando a las estrellas digitales...]",
+      "loading2": "[Analizando el algoritmo de Google...]",
+      "again": "← HACER OTRA PREGUNTA",
+      "answers": [
+        "Los datos confirman: adelante. (Si necesitas ayuda técnica, ya sabes dónde encontrarnos).",
+        "Pésima idea. Tiene las mismas probabilidades de éxito que un sitio en disquete.",
+        "Definitivamente sí. Cualquier cosa es mejor que Comic Sans en 2026.",
+        "No puedo pronunciarme sin cafeína. Invita a un café a Back Software.",
+        "El CSS de tu destino está corrupto. Solicita revisión UX urgente.",
+        "Las estrellas dicen que sí, y Google Analytics también."
+      ]
+    },
+    "slot": {
+      "title": "PALANCA DE LA SUERTE",
+      "subtitle": "Saca un premio de la máquina virtual de Back Software.",
+      "spin": "TIRA DE LA PALANCA",
+      "tryAgain": "← INTENTAR DE NUEVO",
+      "prizes": {
+        "coffee": "¡Has ganado: Un Café Pendiente! ☕ Pasa por nuestra agencia en Ivrea a recogerlo.",
+        "bugs": "¡Has ganado: 3 Bugs en producción! 🎉 (Tranquilo, los arreglamos nosotros).",
+        "pizza": "¡Has ganado: Ser el primero en invitar a pizza a nuestro equipo!",
+        "client": "Has ganado: Un cliente que dice 'Sí pero mi primo lo hace más barato'. Condolencias.",
+        "nerd": "¡Has ganado: El inmenso respeto de los nerds de Back Software! (Cuenta en el CV).",
+        "nothing": "¡Has ganado... absolutamente nada! Pero inténtalo de nuevo, el algoritmo es benévolo hoy."
+      }
+    },
+    "excuse": {
+      "title": "GENERADOR DE EXCUSAS",
+      "subtitle": "¿Necesitas justificar un retraso con el jefe o un cliente? Nosotros nos encargamos.",
+      "generate": "GENERAR EXCUSA",
+      "generateAnother": "GENERAR OTRA EXCUSA",
+      "loading": "[Calculando superchapuza tecnológicamente irreprochable...]",
+      "excuses": [
+        "Los DNS no se han alineado con los meridianos terrestres, tardarán 24 horas.",
+        "Una llamarada solar ha reiniciado la caché del microservicio en el Norte de Europa.",
+        "El servidor se ha unido a la huelga de transportes, estamos negociando con la RAM.",
+        "Hay un memory leak causado por un gato en el teclado del datacenter de Alemania.",
+        "Se ha roto el tubo del flujo canalizador en el backend. Esperando al técnico.",
+        "¿Deploy el viernes? La máquina del café ha tomado el control de la infraestructura.",
+        "El framework JavaScript ha decidido reescribirse solo por crisis de identidad.",
+        "Hay demasiada latencia cuántica en el cable del router del pasillo."
+      ]
+    },
+    "arcade": {
+      "exit": "Salir →"
+    }
+  },
+  "jsonLd": {
+    "businessName": "Back Software",
+    "businessDesc": "Agencia digital especializada en sitios web, marketing digital, software a medida, foto y vídeo. Soluciones concretas para hacer crecer tu negocio en Ivrea y todo Piamonte.",
+    "address": "Via Ivrea, 10015 Ivrea",
+    "city": "Ivrea",
+    "region": "TO",
+    "postalCode": "10015",
+    "country": "IT",
+    "services": [
+      "Desarrollo de Sitios Web",
+      "Marketing Digital y Meta/Google Ads",
+      "Software y Sistemas de Gestión a Medida",
+      "Servicios de Foto y Vídeo"
+    ],
+    "offerCatalogName": "Servicios Digitales",
+    "websiteOffer": "Sitios Web y Landing Pages",
+    "websiteOfferDesc": "Sitios web profesionales y landing pages optimizadas para conversiones",
+    "marketingOffer": "Marketing y Publicidad Online",
+    "marketingOfferDesc": "Campañas Meta Ads, Google Ads y estrategias de marketing digital",
+    "softwareOffer": "Software a Medida",
+    "softwareOfferDesc": "Sistemas de gestión personalizados, aplicaciones web e integraciones API"
+  }
+}

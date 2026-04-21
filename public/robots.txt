@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://backsoftware.it/sitemap.xml
+
+# Disallow areas that don't provide SEO value
+Disallow: /api/
+Disallow: /_next/

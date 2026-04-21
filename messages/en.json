@@ -1,0 +1,419 @@
+{
+  "metadata": {
+    "title": "Back Software | Websites, Marketing & Custom Software - Ivrea (TO)",
+    "description": "Digital agency in Ivrea (Turin). We build professional websites, Meta/Google Ads campaigns, custom management software, photo and video services. Concrete solutions to grow your business.",
+    "ogTitle": "Back Software | Websites, Marketing & Custom Software",
+    "ogDescription": "Technology that simplifies, not complicates. We build your project as if it were our own. Digital agency in Ivrea, Turin."
+  },
+  "seo": {
+    "keywords": [
+      "websites Ivrea", "web agency Turin", "digital marketing",
+      "custom software", "business websites", "Meta Ads", "Google Ads",
+      "website development", "custom management software", "corporate photo video",
+      "web development Piedmont", "web agency Canavese"
+    ]
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "nav": {
+    "brandName": "Back Software",
+    "brandTagline": "Tailored digital studio",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "arcade": "Arcade Zone",
+    "writeUs": "Contact Us"
+  },
+  "hero": {
+    "title1": "Software that",
+    "title2": "works.",
+    "title3": "Built by ",
+    "title3Highlight": "real people",
+    "subtitle": "Technology that simplifies, not complicates. We build your project as if it were our own.",
+    "ctaMobile": "Let's talk →",
+    "ctaDesktop": "Tell us about your project →",
+    "visualCaption": "Scroll down to continue",
+    "visualPointerHint": "Desktop: follow with the mouse and click — the burst depends on where you press"
+  },
+  "whyUs": {
+    "title": "Why Back Software.",
+    "subtitle": "We're not just developers. We're partners who understand your business.",
+    "cards": {
+      "01": {
+        "title": "Listening",
+        "desc": "Before writing code, we listen. Understanding the problem is more important than the technical solution."
+      },
+      "02": {
+        "title": "Clarity",
+        "desc": "No incomprehensible jargon. We explain everything simply, with no surprises."
+      },
+      "03": {
+        "title": "Results",
+        "desc": "We don't sell projects, we sell solutions that actually work in the real world."
+      }
+    }
+  },
+  "services": {
+    "title": "What we do.",
+    "subtitle": "Concrete solutions for real problems.",
+    "caseFamiglia": {
+      "title": "Family Homes",
+      "desc": "Complete packages for facilities hosting families in need.",
+      "details": "Dedicated service for facilities hosting families in need. We manage everything: website, social media, targeted advertising campaigns and booking system.",
+      "packages": {
+        "6mesi": { "name": "6 Months", "desc": "Complete solution for 6 months: website, social, campaigns and bookings" },
+        "3mesi": { "name": "3 Months", "desc": "Complete solution for 3 months: website, social, campaigns and bookings" },
+        "spot": { "name": "Spot Campaign", "desc": "Spot campaign for 6 months with full management" }
+      }
+    },
+    "sitiLanding": {
+      "title": "Websites & Landing",
+      "desc": "Professional websites and landing pages optimized for conversions.",
+      "details": "Professional websites and landing pages optimized for conversions. From complete corporate websites to targeted landing pages, all responsive and Google-ready.",
+      "packages": {
+        "5-10": { "name": "5-10 Page Website", "desc": "Complete website with 5-10 pages, responsive and optimized" },
+        "landing": { "name": "Landing Page", "desc": "Landing page optimized for conversions and lead generation" }
+      }
+    },
+    "marketing": {
+      "title": "Marketing & ADS",
+      "desc": "Analysis, Meta Ads and Google Ads. Strategies that deliver results.",
+      "details": "Digital marketing strategies and targeted advertising campaigns. Analysis, planning and full management of your Meta and Google campaigns.",
+      "packages": {
+        "analisi": { "name": "Marketing Analysis", "desc": "Complete analysis for effective advertising campaigns" },
+        "meta": { "name": "Meta Ads", "desc": "Campaigns on Meta and other social channels" },
+        "google": { "name": "Google Ads", "desc": "Advertising campaigns on Google Search and Display" }
+      }
+    },
+    "fotoVideo": {
+      "title": "Photo & Video",
+      "desc": "Professional photo and video services for your business.",
+      "details": "Professional photography and video services for your business. Photo shoots, drone footage, corporate videos and social content.",
+      "packages": {
+        "foto": { "name": "Photo Service", "desc": "Professional photography services for businesses and products" },
+        "drone": { "name": "Drone Video", "desc": "Aerial video shooting with professional drone" },
+        "staff": { "name": "Staff Video", "desc": "Video shooting with professional staff" }
+      }
+    },
+    "graficaCopy": {
+      "title": "Graphics & Copy",
+      "desc": "Graphic design and copywriting for your communication.",
+      "details": "Graphic design and copywriting services for your communication. Logos, visual identity, graphic materials and copy that speaks to your audience.",
+      "packages": {
+        "grafica": { "name": "Graphics", "desc": "Graphic design, visual and brand identity services" },
+        "copy": { "name": "Copywriting", "desc": "Writing, communication and SEO copy services" }
+      }
+    },
+    "software": {
+      "title": "Custom Software",
+      "desc": "Management systems, applications and API integrations on demand.",
+      "details": "Advanced digital solutions for business management. Custom software, management systems, web/mobile applications and API integrations.",
+      "packages": {
+        "gestionali": { "name": "Management Systems", "desc": "Customized management systems for your business" },
+        "app": { "name": "Applications", "desc": "Custom web and mobile applications" },
+        "api": { "name": "API Connection", "desc": "Integrations and API connections with other services" }
+      }
+    }
+  },
+  "projects": {
+    "title": "Project Gallery.",
+    "subtitle": "{{count}} Real Success Stories",
+    "categories": {
+      "all": "All",
+      "management": "Management",
+      "website": "Website",
+      "marketing": "Marketing",
+      "crm": "CRM"
+    },
+    "items": {
+      "cantina": {
+        "name": "Winery Management System",
+        "desc": "Complete winemaking management system for a winery with online sales of experiences, gift coupon management and international shipping.",
+        "tags": ["Management", "PWA", "E-commerce"]
+      },
+      "crmMagazzino": {
+        "name": "Warehouse CRM",
+        "desc": "Custom management system for warehouse management, storage and shipping with advanced logistics optimization.",
+        "tags": ["Management", "Logistics"]
+      },
+      "bpres": {
+        "name": "BPres Attendance",
+        "desc": "Complete attendance system to manage check-ins, check-outs, breaks. Automatic leave calculation and vacation/sick leave requests with email approval.",
+        "tags": ["Management", "HR"]
+      },
+      "autodemolizioni": {
+        "name": "Auto-Demolition System",
+        "desc": "Complete CRM for reclamation paperwork, state portal registration, Rentri API, component sales, tank management and CER code control.",
+        "tags": ["CRM", "API", "Compliance"]
+      },
+      "sevenLakes": {
+        "name": "7Lakes Aparthotel",
+        "desc": "Website with drone shoot for virtual tour, Octorate connection for centralized booking engine with Booking.com and Airbnb.",
+        "tags": ["Website", "Booking", "Drone"]
+      },
+      "saluteDomicilio": {
+        "name": "Salute a Domicilio",
+        "desc": "Website, marketing intelligence analysis, advertising landing pages and Google Search campaigns + social retargeting.",
+        "tags": ["Website", "Marketing", "ADS"]
+      },
+      "crmTask": {
+        "name": "CRM Task & Projects",
+        "desc": "Management system for projects, tasks and workflow progress. Client and collaborator management with AI integration via API.",
+        "tags": ["Management", "AI", "Project"]
+      },
+      "myPlace": {
+        "name": "My Place Malpensa",
+        "desc": "Multilingual website with Octorate connection for centralized booking engine and automated reservation management.",
+        "tags": ["Website", "Booking", "Multilingual"]
+      },
+      "marazzato": {
+        "name": "Marazzato Moto",
+        "desc": "Showcase website with dynamic product loading from dedicated panel and online showcase for selling motorcycles and accessories.",
+        "tags": ["Website", "Showcase", "E-commerce"]
+      },
+      "villaKatia": {
+        "name": "Villa Katia Family Home",
+        "desc": "Complete solution: website, landing page and Meta Ads campaigns with focus on Facebook and specific target audience.",
+        "tags": ["Marketing", "Meta Ads", "Landing"]
+      },
+      "quercia": {
+        "name": "Quercia Family Home",
+        "desc": "Website, landing page and Meta Ads sponsored campaigns for family home with targeted marketing strategy.",
+        "tags": ["Marketing", "Meta Ads", "Social"]
+      },
+      "gramsci": {
+        "name": "Gramsci Family Home",
+        "desc": "Complete project with institutional website, dedicated landing pages and targeted social advertising campaigns.",
+        "tags": ["Marketing", "Social", "Landing"]
+      },
+      "benissimo": {
+        "name": "Benissimo Family Home",
+        "desc": "Website development, optimized landing pages and digital marketing strategy with targeted Facebook Ads campaigns.",
+        "tags": ["Marketing", "Facebook Ads", "Web"]
+      },
+      "anziani": {
+        "name": "Social Housing for the Elderly",
+        "desc": "Social housing facility for the elderly in Abbiategrasso: institutional website, landing page and dedicated marketing campaigns.",
+        "tags": ["Marketing", "Web", "Social"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's talk about your future.",
+    "subtitle": "Tell us about your project. First we analyze, then we tell you what you really need.",
+    "formCta": "Fill out the form",
+    "email": "Email",
+    "callUs": "Or call us:",
+    "writeUs": "Contact Us",
+    "form": {
+      "title": "Contact Us",
+      "subtitle": "We reply within 24 hours.",
+      "step1": {
+        "title": "Your details",
+        "name": "Name",
+        "company": "Business/Company name (optional)",
+        "email": "Email",
+        "prefix": "+39",
+        "phone": "Mobile",
+        "emailError": "Please enter a valid email address (e.g. name@company.com).",
+        "prefixError": "Invalid prefix. Use international format, e.g. +39.",
+        "phoneError": "Invalid number. Enter 6 to 14 digits.",
+        "phoneRequired": "Country prefix and mobile number are required."
+      },
+      "step2": {
+        "title": "What do you need?",
+        "services": {
+          "siti": "Websites",
+          "marketing": "Marketing",
+          "foto": "Photo & Video",
+          "grafica": "Graphics & Brand",
+          "software": "Custom Software",
+          "casa": "Family Homes",
+          "altro": "Other"
+        }
+      },
+      "step3": {
+        "title": "Tell us",
+        "placeholderDefault": "Briefly tell us what you need...",
+        "placeholders": {
+          "siti": ["I have a business and need a showcase website...", "I'd like an e-commerce to sell online...", "I need a landing page for a service..."],
+          "marketing": ["I want more customers with online advertising...", "I need an effective social strategy...", "I want to promote a specific offer..."],
+          "foto": ["I need professional photos for the website...", "I'd like a video to present the company...", "I need to photograph products for the catalog..."],
+          "grafica": ["I don't have a logo and want to start from scratch...", "My brand is old, I'd like to renew it...", "I need a complete visual identity..."],
+          "software": ["I manage everything with spreadsheets...", "I need a custom management system...", "I need a web app for bookings..."],
+          "casa": ["I manage a facility and need booking...", "I want a website with online bookings...", "I need to digitize management..."],
+          "altro": ["I need multiple services together...", "I'm not sure what I need, I'd like to discuss...", "I want a complete package..."]
+        }
+      },
+      "step4": {
+        "title": "Confirm and send request",
+        "subtitle": "Final step: choose the sending channel. We pre-fill the message in an orderly and professional way.",
+        "contactCard": "Contact card",
+        "ready": "READY TO SEND",
+        "nameLabel": "Name:",
+        "companyLabel": "Company:",
+        "notSpecified": "Not specified",
+        "emailLabel": "Email:",
+        "phoneLabel": "Mobile:",
+        "serviceLabel": "Service:",
+        "descriptionLabel": "Description:",
+        "sendWhatsApp": "Send on WhatsApp",
+        "sendEmail": "Send via Email"
+      },
+      "back": "← Back",
+      "next": "Next →",
+      "confirm": "Confirm and send →"
+    }
+  },
+  "contactMessage": {
+    "subject": "Quote request - {{service}} - {{name}}",
+    "header": "New commercial request",
+    "contactSection": "CONTACT DETAILS",
+    "nameLabel": "Name",
+    "companyLabel": "Business/Company",
+    "companyNotSpecified": "Not specified",
+    "emailLabel": "Email",
+    "phoneLabel": "Mobile",
+    "requestSection": "REQUEST",
+    "serviceLabel": "Service",
+    "descriptionSection": "DESCRIPTION"
+  },
+  "serviceModal": {
+    "backToServices": "← Back to services",
+    "backToProjects": "← Back to projects",
+    "backToHome": "← Back to home",
+    "choosePackage": "Choose package:",
+    "requestQuote": "Request quote →",
+    "requestInfo": "Request info",
+    "similarProject": "Request similar project",
+    "otherServices": "Other services",
+    "otherProjects": "Other projects",
+    "category": "Category"
+  },
+  "footer": {
+    "description": "We design and develop digital solutions with clear objectives, defined timelines and continuous support.",
+    "services": "Services",
+    "company": "Company",
+    "contacts": "Contact",
+    "pec": "Certified Email:",
+    "address": "Ivrea (TO), Italy",
+    "close": "Close footer",
+    "links": {
+      "howWeWork": "How we work",
+      "contacts": "Contact",
+      "pricing": "Services & Pricing",
+      "web": "Websites",
+      "marketing": "Marketing",
+      "grafica": "Graphics",
+      "video": "Video"
+    },
+    "copyright": "© {{year}} Back Software",
+    "vat": "VAT: IT13227980011",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "terms": "Terms & Conditions"
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "Information on the processing of personal data and data subject rights — Back Software.",
+    "cookiesTitle": "Cookie Policy",
+    "cookiesDescription": "Use of cookies and similar technologies on backsoftware.it — Back Software.",
+    "termsTitle": "Terms & Conditions",
+    "termsDescription": "General terms for digital services, software and marketing — Back Software.",
+    "backHome": "← Back to home",
+    "relatedLabel": "Related documents",
+    "disclaimer": "Texts updated 21 April 2026: no cookie banner (first-party tools and technical/necessary cookies only, as described in the policies). Review periodically with your legal adviser."
+  },
+  "terminal": {
+    "boot": {
+      "title": "BACK OS v2.0<br/>TERMINAL EDITION",
+      "loading": "BOOTING SYSTEM..."
+    },
+    "apps": {
+      "oracle": "MAGIC ORACLE",
+      "slot": "PRIZE SLOT",
+      "excuse": "EXCUSES",
+      "arcade": "ARCADE"
+    },
+    "games": {
+      "snake": "SNAKE",
+      "flappy": "FLAPPY",
+      "dino": "DINO RUN",
+      "space": "INVADERS"
+    },
+    "oracle": {
+      "title": "THE MAGIC BUSINESS ORACLE",
+      "subtitle": "Type a work doubt and consult the Ivrea Oracle.",
+      "placeholder": "e.g.: should I launch an e-commerce?",
+      "ask": "ASK THE ORACLE",
+      "loading1": "[Connecting to digital stars...]",
+      "loading2": "[Analyzing Google's algorithm...]",
+      "again": "← ASK ANOTHER QUESTION",
+      "answers": [
+        "Data confirms: proceed. (If you need technical help, you know where to find us).",
+        "Terrible idea. It has the same success probability as a website on Floppy Disk.",
+        "Definitely yes. Anything is better than Comic Sans in 2026.",
+        "I can't say without caffeine. Buy Back Software a coffee.",
+        "Your destiny CSS is corrupted. Request urgent UX review.",
+        "The stars say yes, and so does Google Analytics."
+      ]
+    },
+    "slot": {
+      "title": "LUCKY LEVER",
+      "subtitle": "Draw a prize from Back Software's virtual machine.",
+      "spin": "PULL THE LEVER",
+      "tryAgain": "← TRY AGAIN",
+      "prizes": {
+        "coffee": "You won: A Suspended Espresso! ☕ Stop by our Ivrea agency to claim it.",
+        "bugs": "You won: 3 Production Bugs! 🎉 (Don't worry, we'll fix them).",
+        "pizza": "You won: Being the first to buy our team pizza!",
+        "client": "You won: A client saying 'Yes but my cousin does it cheaper'. Condolences.",
+        "nerd": "You won: The immense respect of Back Software nerds! (It counts on your resume).",
+        "nothing": "You won... absolutely nothing! But try again, the algorithm is forgiving today."
+      }
+    },
+    "excuse": {
+      "title": "EXCUSE GENERATOR",
+      "subtitle": "Need to justify a delay with your boss or client? We've got you covered.",
+      "generate": "GENERATE EXCUSE",
+      "generateAnother": "GENERATE ANOTHER EXCUSE",
+      "loading": "[Calculating technically impeccable excuse...]",
+      "excuses": [
+        "The DNS haven't aligned with earth meridians, it will take 24 hours.",
+        "A solar flare reset the microservice cache in Northern Europe.",
+        "The server joined the transit strike, we're negotiating with the RAM.",
+        "There's a memory leak caused by a cat on the German datacenter keyboard.",
+        "The backend channeling flow pipe broke. Waiting for technician.",
+        "Deploy on Friday? The coffee machine took control of the infrastructure.",
+        "The JavaScript framework decided to rewrite itself due to identity crisis.",
+        "There's too much quantum latency in the hallway router cable."
+      ]
+    },
+    "arcade": {
+      "exit": "Exit →"
+    }
+  },
+  "jsonLd": {
+    "businessName": "Back Software",
+    "businessDesc": "Digital agency specialized in websites, digital marketing, custom software, photo and video. Concrete solutions to grow your business in Ivrea and throughout Piedmont.",
+    "address": "Via Ivrea, 10015 Ivrea",
+    "city": "Ivrea",
+    "region": "TO",
+    "postalCode": "10015",
+    "country": "IT",
+    "services": [
+      "Website Development",
+      "Digital Marketing and Meta/Google Ads",
+      "Custom Software and Management Systems",
+      "Photo and Video Services"
+    ],
+    "offerCatalogName": "Digital Services",
+    "websiteOffer": "Websites and Landing Pages",
+    "websiteOfferDesc": "Professional websites and landing pages optimized for conversions",
+    "marketingOffer": "Marketing and Online Advertising",
+    "marketingOfferDesc": "Meta Ads, Google Ads campaigns and digital marketing strategies",
+    "softwareOffer": "Custom Software",
+    "softwareOfferDesc": "Customized management systems, web applications and API integrations"
+  }
+}
