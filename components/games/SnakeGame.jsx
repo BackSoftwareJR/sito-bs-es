@@ -546,8 +546,10 @@ export default function SnakeGame({ color }) {
           ref={canvasRef}
           width={dimensions.width}
           height={dimensions.height}
-          className="block relative z-0"
+          tabIndex={0}
+          className="relative z-0 block outline-none"
           style={{ maxWidth: '100%', maxHeight: '100%', imageRendering: 'pixelated' }}
+          onMouseDown={(e) => e.currentTarget.focus()}
         />
         )}
         

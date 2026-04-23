@@ -459,8 +459,10 @@ export default function FlappyGame({ color }) {
           ref={canvasRef}
           width={dimensions.width}
           height={dimensions.height}
-          className="block w-full h-full relative z-0"
+          tabIndex={0}
+          className="relative z-0 block h-full w-full outline-none"
           style={{ imageRendering: 'pixelated' }}
+          onMouseDown={(e) => e.currentTarget.focus()}
         />
         )}
 
