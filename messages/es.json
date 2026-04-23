@@ -57,14 +57,60 @@
   "services": {
     "title": "Qué hacemos.",
     "subtitle": "Soluciones concretas para problemas reales.",
+    "workflow": {
+      "title": "Nuestro método.",
+      "eyebrow": "Proceso UX/UI",
+      "kicker": "Del análisis a la ejecución, con decisiones guiadas por datos y objetivos.",
+      "subtitle": "Tres pasos claros para convertir una idea en un resultado medible.",
+      "stepLabel": "Etapa {{step}}",
+      "forecastKicker": "Previsión de impacto",
+      "forecastTitle": "Qué puedes esperar en las primeras semanas.",
+      "forecastSubtitle": "Cada proyecto cambia según sector y punto de partida, pero este es el marco operativo que usamos para medir avances reales.",
+      "footerNote": "Objetivo: reducir incertidumbre, acelerar decisiones y crear una base sólida de crecimiento.",
+      "cta": "Hablemos de tu proyecto",
+      "analysis": {
+        "title": "Escuchamos y analizamos",
+        "desc": "Partimos de tus objetivos y del contexto real de tu negocio para definir prioridades concretas."
+      },
+      "design": {
+        "title": "Diseñamos y desarrollamos",
+        "desc": "Construimos una solución a medida, cuidando experiencia, rendimiento y simplicidad de uso."
+      },
+      "launch": {
+        "title": "Lanzamos y optimizamos",
+        "desc": "Publicamos el proyecto, seguimos los resultados y mejoramos de forma continua junto a tu equipo."
+      }
+    },
     "caseFamiglia": {
       "title": "Hogares Familiares",
-      "desc": "Paquetes completos para estructuras que acogen familias en dificultad.",
-      "details": "Servicio dedicado a estructuras que acogen familias en dificultad. Gestionamos todo: sitio web, redes sociales, campañas publicitarias dirigidas y sistema de reservas.",
+      "desc": "Residencias para mayores: ecosistema digital propio y acompañamiento integral.",
+      "details": "Las Case Famiglia son residencias para personas mayores que necesitan organización y herramientas serias. Te acompañamos desde la apertura hasta la gestión diaria con software a medida y propio, integración de hardware cuando hace falta y un ecosistema digital único — no solo un gestional, sino una plataforma interconectada que sigue la estructura en cada fase. Alianza estratégica con Cristina Malvini, consultora referente en el sector. Comunicación, procesos y datos conectados: innovación aplicada de verdad.",
       "packages": {
         "6mesi": { "name": "6 Meses", "desc": "Solución completa por 6 meses: web, redes, campañas y reservas" },
         "3mesi": { "name": "3 Meses", "desc": "Solución completa por 3 meses: web, redes, campañas y reservas" },
         "spot": { "name": "Campaña Spot", "desc": "Campaña spot por 6 meses con gestión completa" }
+      },
+      "expand": {
+        "partner": "Con Cristina Malvini · consultoría líder en Case Famiglia",
+        "slide0": "Residencias para mayores: te acompañamos a 360°, desde la idea de apertura hasta la operación diaria. Colaboración con Cristina Malvini para una consultoría competente y cercana.",
+        "slide1": "No es «un gestional más»: es un ecosistema propio que une software a medida, integraciones y, cuando hace falta, hardware — pensado para trabajar como un solo sistema.",
+        "slide2": "Innovación real: procesos claros, datos conectados, menos dispersión. El sistema pensado para quien hace acogida — alineado con la visión estratégica de Cristina Malvini.",
+        "cta": "Descubre más",
+        "hint": "Detalle del servicio y roadmap",
+        "pillA": "360° · de la apertura al día a día",
+        "pillB": "Hardware + software integrados",
+        "prevLeft": "Imagen anterior — galería izquierda",
+        "nextLeft": "Imagen siguiente — galería izquierda",
+        "prevRight": "Imagen anterior — galería derecha",
+        "nextRight": "Imagen siguiente — galería derecha",
+        "prev": "Imagen anterior",
+        "next": "Imagen siguiente",
+        "imageAlt0": "Ambiente acogedor de una residencia para mayores",
+        "imageAlt1": "Espacio común ordenado y luminoso",
+        "imageAlt2": "Arquitectura y detalle en la estructura",
+        "imageAlt3": "Espacios cuidados para acogida y tranquilidad",
+        "imageAlt4": "Interior luminoso pensado para el bienestar",
+        "imageAlt5": "Detalles de confort en la residencia"
       }
     },
     "sitiLanding": {
@@ -331,6 +377,7 @@
       "loading": "INICIANDO SISTEMA..."
     },
     "apps": {
+      "tablistLabel": "Selecciona una app",
       "oracle": "ORÁCULO MÁGICO",
       "slot": "TRAGAPERRAS",
       "excuse": "EXCUSAS",

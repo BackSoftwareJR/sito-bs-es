@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useI18n } from '../lib/i18n-context';
 import SnakeGame from './games/SnakeGame';
@@ -35,6 +35,9 @@ const GAME_TITLE_KEYS = {
   [GAMES.DINO]: 'terminal.games.dino',
   [GAMES.SPACE]: 'terminal.games.space',
 };
+
+const APP_ORDER = [APPS.ORACLE, APPS.SLOT, APPS.EXCUSE, APPS.ARCADE];
+const GAME_ORDER = [GAMES.SNAKE, GAMES.FLAPPY, GAMES.DINO, GAMES.SPACE];
 
 /* ===========================================================
    MINI-APPS COMPONENTS
@@ -244,6 +247,9 @@ export default function TerminalExperience({ onSwitchToModern }) {
   const [terminalColor, setTerminalColor] = useState('amber');
   const [currentApp, setCurrentApp] = useState(APPS.ORACLE);
   const [currentGame, setCurrentGame] = useState(GAMES.SNAKE);
+  const [retroCursor, setRetroCursor] = useState({ x: 0, y: 0, on: false });
+  const appTabRefs = useRef({});
+  const gameTabRefs = useRef({});
 
   const COLOR_PROFILES = useMemo(() => ({
     amber: { main: '#ffcc00', glow: 'rgba(255,204,0,0.35)', glowStrong: 'rgba(255,204,0,0.6)', beam: 'rgba(255,204,0,0.02)', beamStrong: 'rgba(255,204,0,0.05)' },
@@ -259,6 +265,70 @@ export default function TerminalExperience({ onSwitchToModern }) {
     }, 600);
     return () => clearTimeout(timer);
   }, []);
+
+  // Re-enable system cursor if it was hidden on the modern site (hero / why lens)
+  useEffect(() => {
+    document.documentElement.classList.remove('site-system-cursor-off');
+  }, []);
+
+  const handleAppTabsKeyDownCapture = useCallback(
+    (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      const t = e.target;
+      if (!t?.closest?.('[data-terminal-app-tabs]')) return;
+      if (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA') return;
+      e.preventDefault();
+      e.stopPropagation();
+      const order = APP_ORDER;
+      const idx = order.indexOf(currentApp);
+      if (idx < 0) return;
+      const delta = e.key === 'ArrowRight' ? 1 : -1;
+      const next = order[(idx + delta + order.length) % order.length];
+      setCurrentApp(next);
+      requestAnimationFrame(() => appTabRefs.current[next]?.focus?.());
+    },
+    [currentApp],
+  );
+
+  const handleGameTabsKeyDownCapture = useCallback(
+    (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      const t = e.target;
+      if (!t?.closest?.('[data-terminal-game-tabs]')) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const order = GAME_ORDER;
+      const idx = order.indexOf(currentGame);
+      if (idx < 0) return;
+      const delta = e.key === 'ArrowRight' ? 1 : -1;
+      const next = order[(idx + delta + order.length) % order.length];
+      setCurrentGame(next);
+      requestAnimationFrame(() => gameTabRefs.current[next]?.focus?.());
+    },
+    [currentGame],
+  );
+
+  // Frecce ← / → cambiano app quando il focus non è sulle tab (gestite sopra), né su input, né in sala giochi
+  useEffect(() => {
+    if (bootPhase !== 'ready') return undefined;
+    const onWindowKey = (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      const ae = document.activeElement;
+      if (ae?.closest?.('[data-terminal-app-tabs]')) return;
+      if (ae?.closest?.('[data-terminal-game-tabs]')) return;
+      if (ae?.tagName === 'INPUT' || ae?.tagName === 'TEXTAREA' || ae?.isContentEditable) return;
+      if (currentApp === APPS.ARCADE) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const order = APP_ORDER;
+      const idx = order.indexOf(currentApp);
+      if (idx < 0) return;
+      const delta = e.key === 'ArrowRight' ? 1 : -1;
+      setCurrentApp(order[(idx + delta + order.length) % order.length]);
+    };
+    window.addEventListener('keydown', onWindowKey, true);
+    return () => window.removeEventListener('keydown', onWindowKey, true);
+  }, [bootPhase, currentApp]);
 
   const handleTogglePower = useCallback(() => {
     onSwitchToModern();
@@ -292,15 +362,26 @@ export default function TerminalExperience({ onSwitchToModern }) {
       case APPS.ARCADE: return (
         <div className="w-full h-full flex flex-col">
           {/* GAME SELECTOR TABS - Sub menu */}
-          <div className="flex items-center justify-center gap-1 sm:gap-2 p-1 sm:p-2 border-b border-[var(--t-color)] border-opacity-30 shrink-0">
-            {Object.values(GAMES).map((game) => (
+          <div
+            role="tablist"
+            data-terminal-game-tabs
+            onKeyDownCapture={handleGameTabsKeyDownCapture}
+            className="flex shrink-0 items-center justify-center gap-1 border-b border-[var(--t-color)] border-opacity-30 p-1 sm:gap-2 sm:p-2"
+          >
+            {GAME_ORDER.map((game) => (
               <motion.button
                 key={game}
+                ref={(el) => {
+                  gameTabRefs.current[game] = el;
+                }}
+                type="button"
+                role="tab"
+                tabIndex={currentGame === game ? 0 : -1}
                 onClick={() => handleGameChange(game)}
-                className={`px-2 py-1 text-[8px] sm:text-[9px] font-black uppercase tracking-wider transition-all border ${
-                  currentGame === game 
-                    ? 'bg-[var(--t-color)] text-[#070b07] border-[var(--t-color)]' 
-                    : 'text-[var(--t-color)] border-[var(--t-color)] border-opacity-30 hover:border-opacity-100'
+                className={`border px-2 py-1 text-[8px] font-black uppercase tracking-wider transition-all sm:text-[9px] ${
+                  currentGame === game
+                    ? 'border-[var(--t-color)] bg-[var(--t-color)] text-[#070b07]'
+                    : 'border-[var(--t-color)] border-opacity-30 text-[var(--t-color)] hover:border-opacity-100'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -328,15 +409,16 @@ export default function TerminalExperience({ onSwitchToModern }) {
       );
       default: return <OracleApp color={color} />;
     }
-  }, [currentApp, currentGame, terminalColor, COLOR_PROFILES, renderGame, t]);
+  }, [currentApp, currentGame, terminalColor, COLOR_PROFILES, renderGame, t, handleGameTabsKeyDownCapture]);
 
   const profile = COLOR_PROFILES[terminalColor];
 
   const bootTitleHtml = useMemo(() => ({ __html: t('terminal.boot.title') }), [t]);
 
   return (
-    <div className="w-full h-full overflow-hidden select-none flex items-center justify-center p-0 fixed inset-0 z-[9999]"
-      style={{ 
+    <div
+      className="fixed inset-0 z-[9999] flex cursor-none items-center justify-center overflow-hidden p-0"
+      style={{
         background: '#0a0a0a',
         '--t-color': profile.main,
         '--t-color-glow': profile.glow,
@@ -344,7 +426,10 @@ export default function TerminalExperience({ onSwitchToModern }) {
         '--t-color-beam': profile.beam,
         '--t-color-beam-strong': profile.beamStrong,
         color: profile.main,
-      }}>
+      }}
+      onPointerMove={(e) => setRetroCursor({ x: e.clientX, y: e.clientY, on: true })}
+      onPointerLeave={() => setRetroCursor((s) => ({ ...s, on: false }))}
+    >
 
       <div className="relative w-full h-full flex flex-col items-center justify-center p-2 sm:p-3 md:p-4">
 
@@ -434,9 +519,12 @@ export default function TerminalExperience({ onSwitchToModern }) {
                 `,
                 }}>
                 {/* Screen glass */}
-                <div className={`w-full h-full overflow-hidden relative bg-[#070b07] crt-screen flex flex-col`} style={{
-                  boxShadow: 'inset 0 0 120px rgba(0,0,0,0.98), inset 0 0 40px rgba(0,12,0,0.6)',
-                }}>
+                <div
+                  className="crt-screen relative flex h-full w-full select-none flex-col overflow-hidden bg-[#070b07]"
+                  style={{
+                    boxShadow: 'inset 0 0 120px rgba(0,0,0,0.98), inset 0 0 40px rgba(0,12,0,0.6)',
+                  }}
+                >
 
                 {/* Vignette */}
                 <div className="absolute inset-0 z-10 crt-vignette" />
@@ -451,18 +539,31 @@ export default function TerminalExperience({ onSwitchToModern }) {
 
                   {/* APP SELECTOR TABS - Top */}
                   {bootPhase === 'ready' && (
-                    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 p-4 sm:p-5 border-b-2 border-[var(--t-color)] border-opacity-30 z-20 bg-[#070b07]/90 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.8)] relative">
+                    <div
+                      role="tablist"
+                      aria-label={t('terminal.apps.tablistLabel')}
+                      data-terminal-app-tabs
+                      onKeyDownCapture={handleAppTabsKeyDownCapture}
+                      className="relative z-20 flex flex-wrap items-center justify-center gap-3 border-b-2 border-[var(--t-color)] border-opacity-30 bg-[#070b07]/90 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.8)] backdrop-blur-md sm:gap-6 sm:p-5"
+                    >
                       {/* Subtle gradient under the menu */}
-                      <div className="absolute bottom-0 left-0 right-0 h-10 translate-y-full bg-gradient-to-b from-[#070b07]/80 to-transparent pointer-events-none" />
-                      
-                      {Object.values(APPS).map((app) => (
+                      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 translate-y-full bg-gradient-to-b from-[#070b07]/80 to-transparent" />
+
+                      {APP_ORDER.map((app) => (
                         <motion.button
                           key={app}
+                          ref={(el) => {
+                            appTabRefs.current[app] = el;
+                          }}
+                          type="button"
+                          role="tab"
+                          aria-selected={currentApp === app}
+                          tabIndex={currentApp === app ? 0 : -1}
                           onClick={() => handleAppChange(app)}
-                          className={`px-4 py-2 sm:px-8 sm:py-3 text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-[0.2em] transition-all border-2 ${
-                            currentApp === app 
-                              ? 'bg-[var(--t-color)] text-[#070b07] border-[var(--t-color)] shadow-[0_0_20px_var(--t-color-glow-strong)] scale-105' 
-                              : 'text-[var(--t-color)] border-[var(--t-color)] border-opacity-40 hover:border-opacity-100 hover:shadow-[0_0_15px_var(--t-color-glow)] hover:bg-[var(--t-color)]/10'
+                          className={`border-2 px-4 py-2 text-[10px] font-black uppercase tracking-[0.2em] transition-all sm:px-8 sm:py-3 sm:text-xs md:text-sm ${
+                            currentApp === app
+                              ? 'scale-105 border-[var(--t-color)] bg-[var(--t-color)] text-[#070b07] shadow-[0_0_20px_var(--t-color-glow-strong)]'
+                              : 'border-[var(--t-color)] border-opacity-40 text-[var(--t-color)] hover:border-opacity-100 hover:bg-[var(--t-color)]/10 hover:shadow-[0_0_15px_var(--t-color-glow)]'
                           }`}
                           whileHover={{ scale: 1.08 }}
                           whileTap={{ scale: 0.95 }}
@@ -645,6 +746,24 @@ export default function TerminalExperience({ onSwitchToModern }) {
           </div>
         </div>
       </div>
+
+      {retroCursor.on ? (
+        <div
+          aria-hidden
+          className="pointer-events-none fixed z-[100000] box-border border border-[#0a0a0a]"
+          style={{
+            width: 12,
+            height: 20,
+            left: retroCursor.x,
+            top: retroCursor.y,
+            transform: 'translate(2px, 2px)',
+            background: profile.main,
+            boxShadow: `0 0 8px ${profile.glowStrong}, inset 0 0 0 1px rgba(255,255,255,0.35)`,
+            animation: 'terminal-cursor-blink 1.05s steps(1, end) infinite',
+            imageRendering: 'pixelated',
+          }}
+        />
+      ) : null}
     </div>
   );
 }

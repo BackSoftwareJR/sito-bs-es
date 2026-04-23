@@ -59,12 +59,34 @@
     "subtitle": "Soluzioni concrete per problemi reali.",
     "caseFamiglia": {
       "title": "Case Famiglia",
-      "desc": "Pacchetti completi per strutture che ospitano famiglie in difficoltà.",
-      "details": "Servizio dedicato alle strutture che ospitano famiglie in difficoltà. Gestiamo tutto: sito web, social media, campagne pubblicitarie mirate e sistema di prenotazioni.",
+      "desc": "Strutture per anziani: ecosistema digitale proprietario e follow-up a 360°.",
+      "details": "Le Case Famiglia sono strutture per anziani che richiedono organizzazione e strumenti seri. Ti accompagniamo dall’apertura alla gestione quotidiana con software su misura e proprietari, integrazione hardware dove serve e un ecosistema digitale unico — non un semplice gestionale, ma una piattaforma interconnessa che segue la struttura in ogni fase. Partnership strategica con Cristina Malvini, consulente di riferimento nel settore. Comunicazione, processi e dati collegati: innovazione applicata davvero.",
       "packages": {
         "6mesi": { "name": "6 Mesi", "desc": "Soluzione completa per 6 mesi: sito, social, campagne e prenotazioni" },
         "3mesi": { "name": "3 Mesi", "desc": "Soluzione completa per 3 mesi: sito, social, campagne e prenotazioni" },
         "spot": { "name": "Campagna Spot", "desc": "Campagna spot per 6 mesi con gestione completa" }
+      },
+      "expand": {
+        "partner": "Con Cristina Malvini · consulenza leader nel settore Case Famiglia",
+        "slide0": "Strutture per anziani: ti seguiamo a 360°, dall’idea di apertura alla gestione operativa. Partnership con Cristina Malvini per una consulenza competente e radicata nel territorio.",
+        "slide1": "Non un gestionale «in più»: è un ecosistema proprietario che unisce software su misura, integrazioni e, dove serve, componenti hardware — tutto pensato per dialogare tra loro.",
+        "slide2": "Innovazione concreta: processi chiari, dati collegati, meno dispersione. Il sistema che accompagna davvero chi fa accoglienza — e si integra con la visione strategica di Cristina Malvini.",
+        "cta": "Scopri di più",
+        "hint": "Dettaglio servizio & roadmap",
+        "pillA": "360° · dall’avvio alla gestione",
+        "pillB": "Hardware + software integrati",
+        "prevLeft": "Scorri immagine sinistra",
+        "nextLeft": "Immagine successiva sinistra",
+        "prevRight": "Scorri immagine destra",
+        "nextRight": "Immagine successiva destra",
+        "prev": "Immagine precedente",
+        "next": "Immagine successiva",
+        "imageAlt0": "Ambiente accogliente di una struttura per anziani",
+        "imageAlt1": "Spazio comune ordinato e luminoso",
+        "imageAlt2": "Architettura e cura dei dettagli nella struttura",
+        "imageAlt3": "Ambienti curati per accoglienza e serenità",
+        "imageAlt4": "Spazio luminoso pensato per il benessere",
+        "imageAlt5": "Dettagli di comfort nella residenza"
       }
     },
     "sitiLanding": {
@@ -113,6 +135,29 @@
         "gestionali": { "name": "Gestionali", "desc": "Sistemi gestionali personalizzati per la tua azienda" },
         "app": { "name": "Applicazioni", "desc": "Applicazioni web e mobile su misura" },
         "api": { "name": "Collegamento API", "desc": "Integrazioni e collegamenti API con altri servizi" }
+      }
+    },
+    "workflow": {
+      "title": "Il nostro metodo.",
+      "subtitle": "Dalla prima analisi al rilascio, lavoriamo con un processo chiaro e condiviso.",
+      "kicker": "PROCESSO UX/UI",
+      "stepLabel": "Step {{step}}",
+      "footerNote": "Un processo solido riduce sprechi, accelera le decisioni e migliora la qualità del risultato.",
+      "forecastKicker": "Previsione",
+      "forecastTitle": "Cosa puoi aspettarti, in modo realistico.",
+      "forecastSubtitle": "Prima di partire definiamo obiettivi, indicatori e una traiettoria di miglioramento concreta.",
+      "cta": "Parlaci del tuo progetto",
+      "analysis": {
+        "title": "Analisi",
+        "desc": "Partiamo dai tuoi obiettivi, dal contesto e dai vincoli reali per definire le priorità giuste."
+      },
+      "design": {
+        "title": "Progettazione",
+        "desc": "Traduciamo la strategia in struttura, contenuti e sviluppo: tutto orientato a usabilità e risultati."
+      },
+      "launch": {
+        "title": "Rilascio & crescita",
+        "desc": "Pubblicazione, monitoraggio e ottimizzazione continua per migliorare performance e conversioni."
       }
     }
   },
@@ -331,6 +376,7 @@
       "loading": "BOOTING SYSTEM..."
     },
     "apps": {
+      "tablistLabel": "Seleziona un'app",
       "oracle": "SFERA MAGICA",
       "slot": "SLOT PREMI",
       "excuse": "SCUSE",

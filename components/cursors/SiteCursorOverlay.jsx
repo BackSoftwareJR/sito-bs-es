@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const LENS_RADIUS = 120;
@@ -83,13 +83,14 @@ function WhyLensCursor({ x, y }) {
 
 /**
  * Custom cursors — instant 1:1 pointer, system cursor hidden only over hero/why (not nav).
- * Why Us: light duplicate clipped to a circle (--lens-x/y on whyClipRef); lens ring only.
+ * Why Us: light duplicate clipped to a circle (--lens-x/y on whyClipRef, element is full-viewport wide so coords match the pointer); lens ring only.
  */
-export default function SiteCursorOverlay({ whyClipRef, lensDesktopEnabled }) {
+export default function SiteCursorOverlay({ whyClipRef, lensDesktopEnabled, scrollContainerRef }) {
   const reduceMotion = useReducedMotion();
   const [finePointer, setFinePointer] = useState(false);
   const [mode, setMode] = useState('default');
   const [pos, setPos] = useState({ x: -9999, y: -9999 });
+  const lastPointerRef = useRef({ x: -9999, y: -9999 });
 
   useEffect(() => {
     const mq = window.matchMedia('(pointer: fine)');
@@ -113,27 +114,59 @@ export default function SiteCursorOverlay({ whyClipRef, lensDesktopEnabled }) {
     [whyClipRef, lensOn],
   );
 
-  useEffect(() => {
-    if (!heroCursorOn && !lensOn) return undefined;
+  const applyAtClientPoint = useCallback(
+    (clientX, clientY) => {
+      if (!Number.isFinite(clientX) || !Number.isFinite(clientY)) return;
+      lastPointerRef.current = { x: clientX, y: clientY };
+      setPos({ x: clientX, y: clientY });
 
-    const onMove = (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      setPos({ x, y });
-
-      const next = resolveCursorMode(x, y, lensOn);
+      const next = resolveCursorMode(clientX, clientY, lensOn);
       setMode(next);
 
-      if (next === 'why') updateLensCoords(x, y);
+      if (next === 'why') updateLensCoords(clientX, clientY);
       else if (whyClipRef?.current) {
         whyClipRef.current.style.removeProperty('--lens-x');
         whyClipRef.current.style.removeProperty('--lens-y');
       }
+    },
+    [lensOn, whyClipRef, updateLensCoords],
+  );
+
+  useEffect(() => {
+    if (!heroCursorOn && !lensOn) return undefined;
+
+    const onMove = (e) => {
+      applyAtClientPoint(e.clientX, e.clientY);
+    };
+
+    const resyncFromLastPointer = () => {
+      const { x, y } = lastPointerRef.current;
+      if (x <= -1000 || y <= -1000) return;
+      applyAtClientPoint(x, y);
+    };
+
+    let wheelRaf = 0;
+    const onWheel = () => {
+      if (wheelRaf) cancelAnimationFrame(wheelRaf);
+      wheelRaf = requestAnimationFrame(() => {
+        wheelRaf = 0;
+        resyncFromLastPointer();
+      });
     };
 
     window.addEventListener('pointermove', onMove, { passive: true });
-    return () => window.removeEventListener('pointermove', onMove);
-  }, [heroCursorOn, lensOn, whyClipRef, updateLensCoords]);
+    window.addEventListener('wheel', onWheel, { passive: true });
+
+    const scrollEl = scrollContainerRef?.current;
+    if (scrollEl) scrollEl.addEventListener('scroll', resyncFromLastPointer, { passive: true });
+
+    return () => {
+      window.removeEventListener('pointermove', onMove);
+      window.removeEventListener('wheel', onWheel);
+      if (wheelRaf) cancelAnimationFrame(wheelRaf);
+      if (scrollEl) scrollEl.removeEventListener('scroll', resyncFromLastPointer);
+    };
+  }, [heroCursorOn, lensOn, applyAtClientPoint, scrollContainerRef]);
 
   useEffect(() => {
     const hide =

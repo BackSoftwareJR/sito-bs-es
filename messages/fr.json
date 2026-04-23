@@ -57,14 +57,60 @@
   "services": {
     "title": "Ce que nous faisons.",
     "subtitle": "Des solutions concrètes pour des problèmes réels.",
+    "workflow": {
+      "title": "Comment nous opérons.",
+      "subtitle": "Une méthode simple : analyser, construire, améliorer en continu.",
+      "eyebrow": "PROCESSUS",
+      "kicker": "UX PROCESS",
+      "stepLabel": "ÉTAPE {{step}}",
+      "footerNote": "Objectif : avancer avec une vision claire, des choix partagés et des livrables mesurables.",
+      "forecastKicker": "Prévision",
+      "forecastTitle": "Ce que vous pouvez attendre du projet",
+      "forecastSubtitle": "Chaque travail suit ce cadre : vision, périmètre utile et croissance progressive.",
+      "cta": "Parlons de votre projet",
+      "analysis": {
+        "title": "Analyse",
+        "desc": "Nous partons de vos objectifs réels, de vos processus actuels et des résultats attendus."
+      },
+      "design": {
+        "title": "Conception",
+        "desc": "Nous définissons la solution la plus utile pour vous : claire, mesurable et durable."
+      },
+      "launch": {
+        "title": "Lancement & optimisation",
+        "desc": "Nous mettons en ligne, mesurons les performances et améliorons avec des interventions ciblées."
+      }
+    },
     "caseFamiglia": {
       "title": "Foyers Familiaux",
-      "desc": "Forfaits complets pour structures accueillant des familles en difficulté.",
-      "details": "Service dédié aux structures accueillant des familles en difficulté. Nous gérons tout : site web, réseaux sociaux, campagnes publicitaires ciblées et système de réservation.",
+      "desc": "Structures pour seniors : écosystème numérique propriétaire et accompagnement 360°.",
+      "details": "Les Case Famiglia sont des structures pour personnes âgées qui exigent organisation et outils sérieux. Nous vous accompagnons de l’ouverture à la gestion quotidienne avec des logiciels sur mesure et propriétaires, intégration matérielle lorsque nécessaire et un écosystème digital unique — pas un simple gestionnaire, mais une plateforme interconnectée qui suit la structure à chaque étape. Partenariat stratégique avec Cristina Malvini, consultante de référence dans le secteur. Communication, processus et données reliés : une innovation concrète.",
       "packages": {
         "6mesi": { "name": "6 Mois", "desc": "Solution complète pour 6 mois : site, réseaux, campagnes et réservations" },
         "3mesi": { "name": "3 Mois", "desc": "Solution complète pour 3 mois : site, réseaux, campagnes et réservations" },
         "spot": { "name": "Campagne Spot", "desc": "Campagne spot pour 6 mois avec gestion complète" }
+      },
+      "expand": {
+        "partner": "Avec Cristina Malvini · conseil leader pour les Case Famiglia",
+        "slide0": "Structures pour seniors : nous vous suivons à 360°, de l’idée d’ouverture à l’exploitation quotidienne. Partenariat avec Cristina Malvini pour un conseil expert et ancré.",
+        "slide1": "Pas « un gestionnaire de plus » : un écosystème propriétaire qui associe logiciel sur mesure, intégrations et, au besoin, hardware — pensé comme un tout interconnecté.",
+        "slide2": "Innovation réelle : processus clairs, données reliées, moins de dispersion. Le système pensé pour l’accueil — aligné avec la vision stratégique de Cristina Malvini.",
+        "cta": "En savoir plus",
+        "hint": "Détail du service & feuille de route",
+        "pillA": "360° · de l’ouverture au quotidien",
+        "pillB": "Matériel + logiciel intégrés",
+        "prevLeft": "Image précédente — galerie gauche",
+        "nextLeft": "Image suivante — galerie gauche",
+        "prevRight": "Image précédente — galerie droite",
+        "nextRight": "Image suivante — galerie droite",
+        "prev": "Image précédente",
+        "next": "Image suivante",
+        "imageAlt0": "Cadre accueillant d’une structure pour seniors",
+        "imageAlt1": "Espace commun lumineux et organisé",
+        "imageAlt2": "Architecture et soin du détail dans la structure",
+        "imageAlt3": "Espaces soignés pour accueil et sérénité",
+        "imageAlt4": "Intérieur lumineux pensé pour le bien-être",
+        "imageAlt5": "Détails de confort dans la résidence"
       }
     },
     "sitiLanding": {
@@ -331,6 +377,7 @@
       "loading": "DÉMARRAGE DU SYSTÈME..."
     },
     "apps": {
+      "tablistLabel": "Choisir une application",
       "oracle": "ORACLE MAGIQUE",
       "slot": "MACHINE À SOUS",
       "excuse": "EXCUSES",
