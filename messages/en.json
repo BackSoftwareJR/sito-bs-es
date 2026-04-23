@@ -136,6 +136,22 @@
         "app": { "name": "Applications", "desc": "Custom web and mobile applications" },
         "api": { "name": "API Connection", "desc": "Integrations and API connections with other services" }
       }
+    },
+    "workflow": {
+      "title": "Our method.",
+      "subtitle": "A clear process, from first analysis to delivery and support.",
+      "analysis": {
+        "title": "Analysis",
+        "desc": "We understand goals, constraints, and priorities to define the right solution."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "We design structure and execution plan with you, without unnecessary complexity."
+      },
+      "launch": {
+        "title": "Launch & Growth",
+        "desc": "We release, monitor results, and optimize continuously based on real data."
+      }
     }
   },
   "projects": {

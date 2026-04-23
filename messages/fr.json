@@ -57,6 +57,22 @@
   "services": {
     "title": "Ce que nous faisons.",
     "subtitle": "Des solutions concrètes pour des problèmes réels.",
+    "workflow": {
+      "title": "Comment nous opérons.",
+      "subtitle": "Une méthode simple : analyser, construire, améliorer en continu.",
+      "analysis": {
+        "title": "Analyse",
+        "desc": "Nous partons de vos objectifs réels, de vos processus actuels et des résultats attendus."
+      },
+      "design": {
+        "title": "Conception",
+        "desc": "Nous définissons la solution la plus utile pour vous : claire, mesurable et durable."
+      },
+      "launch": {
+        "title": "Lancement & optimisation",
+        "desc": "Nous mettons en ligne, mesurons les performances et améliorons avec des interventions ciblées."
+      }
+    },
     "caseFamiglia": {
       "title": "Foyers Familiaux",
       "desc": "Structures pour seniors : écosystème numérique propriétaire et accompagnement 360°.",

@@ -789,6 +789,26 @@ export default function ModernSite({ onSwitchToTerminal }) {
     { label: t('footer.links.contacts'), href: '#contatti' },
     { label: t('footer.links.pricing'), href: '#servizi' },
   ]), [t]);
+  const workflowSteps = useMemo(() => ([
+    {
+      key: 'analysis',
+      number: '01',
+      title: t('services.workflow.analysis.title'),
+      desc: t('services.workflow.analysis.desc'),
+    },
+    {
+      key: 'design',
+      number: '02',
+      title: t('services.workflow.design.title'),
+      desc: t('services.workflow.design.desc'),
+    },
+    {
+      key: 'launch',
+      number: '03',
+      title: t('services.workflow.launch.title'),
+      desc: t('services.workflow.launch.desc'),
+    },
+  ]), [t]);
 
   // Contact form state
   const initialFormData = {
@@ -1705,6 +1725,42 @@ export default function ModernSite({ onSwitchToTerminal }) {
                 </motion.div>
               )
             ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* ── METODO Section ── */}
+      <motion.section
+        id="metodo"
+        variants={itemVariants}
+        className="modern-snap-section flex min-h-0 flex-col justify-center px-4 sm:px-6 lg:px-10 py-14 sm:py-20"
+      >
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="clay-card p-6 sm:p-10 lg:p-12">
+            <motion.div variants={itemVariants} className="mb-7 sm:mb-9 space-y-2 sm:space-y-3">
+              <motion.h2 {...sectionTitleReveal} className={`${sectionTitleClass} text-[#2d2818]`}>
+                {t('services.workflow.title')}
+              </motion.h2>
+              <motion.p {...sectionSubtitleReveal} className="text-sm sm:text-lg text-[#6a6050] font-medium max-w-3xl">
+                {t('services.workflow.subtitle')}
+              </motion.p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+              {workflowSteps.map((step) => (
+                <motion.article
+                  key={step.key}
+                  variants={itemVariants}
+                  className="rounded-3xl border border-[#d8d1c4] bg-[linear-gradient(145deg,#fdfcf9_0%,#f5f0e7_100%)] p-5 sm:p-6"
+                >
+                  <span className="inline-flex px-3 py-1 rounded-full text-xs font-black tracking-[0.12em] bg-[#e8e1d3] text-[#5a5142] mb-4">
+                    {step.number}
+                  </span>
+                  <h3 className="text-lg sm:text-xl font-black text-[#2d2818] mb-2 leading-tight">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-[#6a6050] leading-relaxed">{step.desc}</p>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </motion.section>
