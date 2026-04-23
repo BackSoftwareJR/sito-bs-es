@@ -142,6 +142,11 @@
       "subtitle": "A clear process, from first analysis to delivery and support.",
       "eyebrow": "From strategy to execution",
       "kicker": "Designed to reduce uncertainty and speed up decision making.",
+      "stepLabel": "Step {{step}}",
+      "forecastKicker": "Data-driven outlook",
+      "forecastTitle": "Strategic forecast",
+      "forecastSubtitle": "After analysis, we define realistic growth hypotheses and the key actions to validate.",
+      "footerNote": "Every project starts from your objectives and evolves with measurable iterations.",
       "cta": "Talk about your project",
       "analysis": {
         "title": "Analysis",

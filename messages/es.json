@@ -60,7 +60,13 @@
     "workflow": {
       "title": "Nuestro método.",
       "eyebrow": "Proceso UX/UI",
+      "kicker": "Del análisis a la ejecución, con decisiones guiadas por datos y objetivos.",
       "subtitle": "Tres pasos claros para convertir una idea en un resultado medible.",
+      "stepLabel": "Etapa {{step}}",
+      "forecastKicker": "Previsión de impacto",
+      "forecastTitle": "Qué puedes esperar en las primeras semanas.",
+      "forecastSubtitle": "Cada proyecto cambia según sector y punto de partida, pero este es el marco operativo que usamos para medir avances reales.",
+      "footerNote": "Objetivo: reducir incertidumbre, acelerar decisiones y crear una base sólida de crecimiento.",
       "cta": "Hablemos de tu proyecto",
       "analysis": {
         "title": "Escuchamos y analizamos",

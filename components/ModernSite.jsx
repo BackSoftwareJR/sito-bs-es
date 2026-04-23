@@ -795,19 +795,30 @@ export default function ModernSite({ onSwitchToTerminal }) {
       number: '01',
       title: t('services.workflow.analysis.title'),
       desc: t('services.workflow.analysis.desc'),
+      meta: t('services.workflow.analysis.meta'),
+      deliverable: t('services.workflow.analysis.deliverable'),
     },
     {
       key: 'design',
       number: '02',
       title: t('services.workflow.design.title'),
       desc: t('services.workflow.design.desc'),
+      meta: t('services.workflow.design.meta'),
+      deliverable: t('services.workflow.design.deliverable'),
     },
     {
       key: 'launch',
       number: '03',
       title: t('services.workflow.launch.title'),
       desc: t('services.workflow.launch.desc'),
+      meta: t('services.workflow.launch.meta'),
+      deliverable: t('services.workflow.launch.deliverable'),
     },
+  ]), [t]);
+  const workflowOutcomes = useMemo(() => ([
+    t('services.workflow.outcomes.0'),
+    t('services.workflow.outcomes.1'),
+    t('services.workflow.outcomes.2'),
   ]), [t]);
 
   // Contact form state
@@ -1740,44 +1751,78 @@ export default function ModernSite({ onSwitchToTerminal }) {
         <div className="mx-auto w-full max-w-6xl">
           <div className="clay-card relative p-6 sm:p-10 lg:p-12 border border-[#d9d0c2]/70 bg-[linear-gradient(138deg,#f9f6ef_0%,#f3eee3_45%,#f8f4ea_100%)]">
             <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent_0%,rgba(196,180,148,0.8)_50%,transparent_100%)]" />
-            <motion.div variants={itemVariants} className="mb-7 sm:mb-9 space-y-3 sm:space-y-4">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d3c8b8] bg-[#efe7d9] px-3 py-1 text-[10px] sm:text-xs font-black tracking-[0.16em] uppercase text-[#6a6050]">
+            <motion.div variants={itemVariants} className="mb-7 sm:mb-9 space-y-3 sm:space-y-4 lg:flex lg:items-end lg:justify-between lg:gap-8 lg:space-y-0">
+              <div className="space-y-3 sm:space-y-4">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d3c8b8] bg-[#efe7d9] px-3 py-1 text-[10px] sm:text-xs font-black tracking-[0.16em] uppercase text-[#6a6050]">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#7c6f5b]" />
                 {t('services.workflow.kicker')}
-              </span>
-              <motion.h2 {...sectionTitleReveal} className={`${sectionTitleClass} text-[#2d2818]`}>
-                {t('services.workflow.title')}
-              </motion.h2>
-              <motion.p {...sectionSubtitleReveal} className="text-sm sm:text-lg text-[#6a6050] font-medium max-w-3xl">
-                {t('services.workflow.subtitle')}
-              </motion.p>
+                </span>
+                <motion.h2 {...sectionTitleReveal} className={`${sectionTitleClass} text-[#2d2818]`}>
+                  {t('services.workflow.title')}
+                </motion.h2>
+                <motion.p {...sectionSubtitleReveal} className="text-sm sm:text-lg text-[#6a6050] font-medium max-w-3xl">
+                  {t('services.workflow.subtitle')}
+                </motion.p>
+              </div>
+              <div className="hidden lg:flex items-center gap-2 text-xs font-black tracking-[0.14em] uppercase text-[#857a67]">
+                <span>{t('services.workflow.timelineLabel')}</span>
+                <div className="h-px w-20 bg-[linear-gradient(90deg,rgba(124,111,91,0.2)_0%,rgba(124,111,91,0.65)_100%)]" />
+              </div>
             </motion.div>
 
-            <div className="relative">
-              <div className="pointer-events-none hidden md:block absolute left-0 right-0 top-[26px] h-px bg-[linear-gradient(90deg,rgba(124,111,91,0.15)_0%,rgba(124,111,91,0.35)_50%,rgba(124,111,91,0.15)_100%)]" />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-              {workflowSteps.map((step, index) => (
-                <motion.article
-                  key={step.key}
-                  variants={itemVariants}
-                  whileHover={{ y: -5, scale: 1.01 }}
-                  transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="group relative rounded-3xl border border-[#d8d1c4] bg-[linear-gradient(145deg,#fffdf9_0%,#f4efe4_100%)] p-5 sm:p-6 shadow-[0_10px_24px_rgba(61,56,40,0.08)]"
-                >
-                  <div className="pointer-events-none absolute inset-x-5 top-0 h-px opacity-0 group-hover:opacity-100 transition-opacity bg-[linear-gradient(90deg,transparent_0%,rgba(196,180,148,0.9)_50%,transparent_100%)]" />
-                  <div className="mb-4 flex items-center justify-between">
-                    <span className="inline-flex px-3 py-1 rounded-full text-xs font-black tracking-[0.12em] bg-[#e8e1d3] text-[#5a5142]">
-                      {step.number}
-                    </span>
-                    <span className="text-[11px] font-black uppercase tracking-[0.14em] text-[#93866f]">
-                      {t('services.workflow.stepLabel', { step: index + 1 })}
-                    </span>
-                  </div>
-                  <h3 className="text-lg sm:text-xl font-black text-[#2d2818] mb-2 leading-tight">{step.title}</h3>
-                  <p className="text-sm sm:text-base text-[#6a6050] leading-relaxed">{step.desc}</p>
-                </motion.article>
-              ))}
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.5fr)_minmax(260px,0.9fr)] gap-5 sm:gap-6 lg:gap-7">
+              <div className="relative">
+                <div className="pointer-events-none absolute left-[20px] top-4 bottom-4 w-px bg-[linear-gradient(180deg,rgba(124,111,91,0.16)_0%,rgba(124,111,91,0.52)_35%,rgba(124,111,91,0.16)_100%)]" />
+                <div className="space-y-4 sm:space-y-5">
+                  {workflowSteps.map((step, index) => (
+                    <motion.article
+                      key={step.key}
+                      variants={itemVariants}
+                      whileHover={{ y: -4, scale: 1.005 }}
+                      transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                      className="group relative ml-0 sm:ml-2 rounded-3xl border border-[#d8d1c4] bg-[linear-gradient(145deg,#fffdf9_0%,#f4efe4_100%)] p-5 sm:p-6 pl-14 sm:pl-16 shadow-[0_10px_24px_rgba(61,56,40,0.08)]"
+                    >
+                      <div className="pointer-events-none absolute inset-x-5 top-0 h-px opacity-0 group-hover:opacity-100 transition-opacity bg-[linear-gradient(90deg,transparent_0%,rgba(196,180,148,0.9)_50%,transparent_100%)]" />
+                      <div className="absolute left-4 sm:left-5 top-5 sm:top-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#d4c9b8] bg-[#ece3d6] text-[11px] font-black tracking-[0.08em] text-[#5a5142]">
+                        {step.number}
+                      </div>
+                      <div className="mb-3 flex flex-wrap items-center gap-2">
+                        <span className="inline-flex rounded-full bg-[#efe7d9] px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-[#7a6f5b]">
+                          {t('services.workflow.stepLabel', { step: index + 1 })}
+                        </span>
+                        <span className="inline-flex rounded-full border border-[#dbd1c2] bg-[#f7f3ea] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-[#8b7f6a]">
+                          {step.meta}
+                        </span>
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-black text-[#2d2818] mb-2 leading-tight">{step.title}</h3>
+                      <p className="text-sm sm:text-base text-[#6a6050] leading-relaxed">{step.desc}</p>
+                      <p className="mt-3 text-xs sm:text-sm font-semibold text-[#7c6f5b]">
+                        {step.deliverable}
+                      </p>
+                    </motion.article>
+                  ))}
+                </div>
               </div>
+
+              <aside className="rounded-3xl border border-[#d8d0c1] bg-[linear-gradient(155deg,#f7f3ea_0%,#efe6d8_100%)] p-5 sm:p-6 shadow-[0_10px_26px_rgba(61,56,40,0.08)]">
+                <p className="text-[10px] sm:text-xs font-black uppercase tracking-[0.16em] text-[#7a6f5b] mb-3">
+                  {t('services.workflow.forecastKicker')}
+                </p>
+                <h3 className="text-xl sm:text-2xl font-black tracking-tight text-[#2d2818] mb-3">
+                  {t('services.workflow.forecastTitle')}
+                </h3>
+                <p className="text-sm sm:text-base leading-relaxed text-[#6a6050] mb-4">
+                  {t('services.workflow.forecastSubtitle')}
+                </p>
+                <ul className="space-y-2.5">
+                  {workflowOutcomes.map((item, idx) => (
+                    <li key={`${item}-${idx}`} className="flex items-start gap-2.5 text-sm sm:text-[15px] text-[#5c5345] font-medium">
+                      <span className="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#8d7d61]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
             </div>
 
             <div className="mt-7 sm:mt-9 pt-6 border-t border-[#d8d0c2] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -1793,6 +1838,7 @@ export default function ModernSite({ onSwitchToTerminal }) {
               >
                 {t('services.workflow.cta')}
               </ShinyButton>
+              </div>
             </div>
           </div>
         </div>

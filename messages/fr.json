@@ -60,7 +60,13 @@
     "workflow": {
       "title": "Comment nous opérons.",
       "subtitle": "Une méthode simple : analyser, construire, améliorer en continu.",
+      "eyebrow": "PROCESSUS",
       "kicker": "UX PROCESS",
+      "stepLabel": "ÉTAPE {{step}}",
+      "footerNote": "Objectif : avancer avec une vision claire, des choix partagés et des livrables mesurables.",
+      "forecastKicker": "Prévision",
+      "forecastTitle": "Ce que vous pouvez attendre du projet",
+      "forecastSubtitle": "Chaque travail suit ce cadre : vision, périmètre utile et croissance progressive.",
       "cta": "Parlons de votre projet",
       "analysis": {
         "title": "Analyse",

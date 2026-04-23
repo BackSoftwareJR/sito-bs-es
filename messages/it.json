@@ -140,7 +140,12 @@
     "workflow": {
       "title": "Il nostro metodo.",
       "subtitle": "Dalla prima analisi al rilascio, lavoriamo con un processo chiaro e condiviso.",
-      "eyebrow": "PROCESSO",
+      "kicker": "PROCESSO UX/UI",
+      "stepLabel": "Step {{step}}",
+      "footerNote": "Un processo solido riduce sprechi, accelera le decisioni e migliora la qualità del risultato.",
+      "forecastKicker": "Previsione",
+      "forecastTitle": "Cosa puoi aspettarti, in modo realistico.",
+      "forecastSubtitle": "Prima di partire definiamo obiettivi, indicatori e una traiettoria di miglioramento concreta.",
       "cta": "Parlaci del tuo progetto",
       "analysis": {
         "title": "Analisi",
