@@ -9,7 +9,31 @@ import PhoneGallery from './PhoneGallery';
 import LanguageSwitcher from './LanguageSwitcher';
 import HeroCreativeVisual from './HeroCreativeVisual';
 import SiteCursorOverlay from './cursors/SiteCursorOverlay';
+import CaseFamigliaServiceCard from './services/CaseFamigliaServiceCard';
 import WhyUsDualContent from './why-us/WhyUsDualContent';
+
+/**
+ * Con Case Famiglia espansa: griglia md a 2 colonne — CF a sinistra (4 righe),
+ * Siti + Marketing + Foto + Grafica impilati a destra, Software sotto a tutta larghezza.
+ */
+function serviziGridPlacementWhenCfExpanded(key) {
+  switch (key) {
+    case 'caseFamiglia':
+      return 'md:col-span-1 md:row-span-4 md:col-start-1 md:row-start-1';
+    case 'sitiLanding':
+      return 'md:col-start-2 md:row-start-1';
+    case 'marketing':
+      return 'md:col-start-2 md:row-start-2';
+    case 'fotoVideo':
+      return 'md:col-start-2 md:row-start-3';
+    case 'graficaCopy':
+      return 'md:col-start-2 md:row-start-4';
+    case 'software':
+      return 'md:col-span-2 md:col-start-1 md:row-start-5';
+    default:
+      return '';
+  }
+}
 
 /* ===========================================================
    MODERN TYPEWRITER — animated placeholder for modern form
@@ -179,6 +203,7 @@ export default function ModernSite({ onSwitchToTerminal }) {
   const { t, locale } = useI18n();
   const [showContactForm, setShowContactForm] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
+  const [caseFamigliaExpanded, setCaseFamigliaExpanded] = useState(false);
   const [selectedCategoryKey, setSelectedCategoryKey] = useState('all');
   const [categoryDirection, setCategoryDirection] = useState(1);
   const [categoryTransitionType, setCategoryTransitionType] = useState('morph');
@@ -1575,7 +1600,7 @@ export default function ModernSite({ onSwitchToTerminal }) {
         <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[60%] rounded-full opacity-[0.04] pointer-events-none" style={{ background: 'radial-gradient(ellipse, #b8a88a 0%, transparent 70%)' }} />
         <div className="hidden sm:block absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-[0.03] pointer-events-none" style={{ background: 'radial-gradient(circle, #c4a76c 0%, transparent 60%)' }} />
 
-        {/* flex-1 = content box (inside padding); lens clip shares this box so light/dark geometry matches */}
+        {/* flex-1 = content box (inside padding); lens layer is full-viewport-wide (bleed); light/dark rows share max-w-6xl */}
         <div className="relative z-10 flex min-h-0 w-full flex-1 flex-col justify-center">
           <div className="relative z-[1] mx-auto w-full min-h-0 max-w-6xl">
             <WhyUsDualContent
@@ -1590,8 +1615,10 @@ export default function ModernSite({ onSwitchToTerminal }) {
           {lensDesktopEnabled ? (
             <div
               ref={whyLensClipRef}
-              className="pointer-events-none absolute inset-0 z-20 flex flex-col justify-center overflow-hidden"
+              className="pointer-events-none absolute top-0 bottom-0 z-20 flex max-w-none flex-col justify-center overflow-hidden"
               style={{
+                left: 'calc(50% - 50vw)',
+                width: '100vw',
                 clipPath: 'circle(120px at var(--lens-x, -9999px) var(--lens-y, -9999px))',
                 WebkitClipPath: 'circle(120px at var(--lens-x, -9999px) var(--lens-y, -9999px))',
               }}
@@ -1617,30 +1644,66 @@ export default function ModernSite({ onSwitchToTerminal }) {
       </motion.section>
 
       {/* ── SERVIZI Section ── */}
-      <motion.section id="servizi" variants={itemVariants} className="modern-snap-section flex flex-col justify-center px-4 sm:px-6 lg:px-10 pt-20 sm:pt-24 pb-12 sm:py-20">
-        <div className="max-w-6xl mx-auto w-full">
-          <motion.div variants={itemVariants} className="mb-6 sm:mb-8 space-y-2 sm:space-y-4">
+      <motion.section
+        id="servizi"
+        variants={itemVariants}
+        className="modern-snap-section snap-scroll-inner flex min-h-0 flex-col justify-start px-4 sm:px-6 lg:px-10 pt-20 sm:pt-24 pb-10 sm:pb-14">
+        <div className="mx-auto w-full max-w-6xl shrink-0">
+          <motion.div variants={itemVariants} className="mb-4 sm:mb-6 space-y-2 sm:space-y-3">
             <motion.h2 {...sectionTitleReveal} className={`${sectionTitleClass} text-[#2d2818]`}>{t('services.title')}</motion.h2>
             <motion.p {...sectionSubtitleReveal} className="text-sm sm:text-lg text-[#6a6050] font-medium">
               {t('services.subtitle')}
             </motion.p>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+          <div
+            className={`grid grid-cols-1 gap-3 transition-[grid-template-columns] duration-300 ease-out sm:grid-cols-2 sm:gap-4 items-start ${
+              caseFamigliaExpanded
+                ? 'md:grid-cols-[minmax(0,1.6fr)_minmax(11.25rem,1fr)]'
+                : 'md:grid-cols-3'
+            }`}
+          >
             {services.map((s, i) => (
-              <motion.div key={i} variants={itemVariants}
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => setSelectedService(s)}
-                className={`clay-card py-3 sm:py-5 px-4 sm:px-6 flex items-center gap-3 sm:gap-5 cursor-pointer group min-h-[72px] sm:min-h-[108px] ${s.span}`}>
-                <span className="w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center text-lg sm:text-xl clay-pill bg-[#f5f2ec] shadow-sm group-hover:scale-110 transition-transform shrink-0">{s.icon}</span>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-sm sm:text-base font-black text-[#2d2818] group-hover:text-[#7c6f5b] transition-colors leading-tight">{s.title}</h4>
-                  <p className="text-[11px] sm:text-xs text-[#6a6050] opacity-80 line-clamp-2">{s.desc}</p>
-                </div>
-                <span className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-xs sm:text-sm transition-transform group-hover:rotate-45 bg-[#f5f2ec] border border-[#d4cfc5] text-[#3d3828] shrink-0" aria-hidden="true">
-                  ↗
-                </span>
-              </motion.div>
+              s.key === 'caseFamiglia' ? (
+                <CaseFamigliaServiceCard
+                  key={s.key}
+                  service={s}
+                  variants={itemVariants}
+                  className={
+                    caseFamigliaExpanded
+                      ? `${serviziGridPlacementWhenCfExpanded('caseFamiglia')} motion-reduce:transition-none`
+                      : s.span
+                  }
+                  expanded={caseFamigliaExpanded}
+                  onExpandHover={() => setCaseFamigliaExpanded(true)}
+                  onCollapseHover={() => setCaseFamigliaExpanded(false)}
+                  onTouchToggle={() => setCaseFamigliaExpanded((prev) => !prev)}
+                  onOpenDetail={() => {
+                    setCaseFamigliaExpanded(false);
+                    setSelectedService(s);
+                  }}
+                />
+              ) : (
+                <motion.div
+                  key={s.key ?? i}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                  onMouseEnter={() => setCaseFamigliaExpanded(false)}
+                  onClick={() => setSelectedService(s)}
+                  className={`clay-card group flex min-h-[68px] cursor-pointer items-center gap-3 px-4 py-2.5 transition-all duration-300 ease-out sm:min-h-[92px] sm:gap-5 sm:px-6 sm:py-4 motion-reduce:transition-none ${s.span} ${
+                    caseFamigliaExpanded ? serviziGridPlacementWhenCfExpanded(s.key) : ''
+                  }`}
+                >
+                  <span className="w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center text-lg sm:text-xl clay-pill bg-[#f5f2ec] shadow-sm group-hover:scale-110 transition-transform shrink-0">{s.icon}</span>
+                  <div className="min-w-0 flex-1">
+                    <h4 className="text-sm sm:text-base font-black text-[#2d2818] group-hover:text-[#7c6f5b] transition-colors leading-tight">{s.title}</h4>
+                    <p className="text-[11px] sm:text-xs text-[#6a6050] opacity-80 line-clamp-2">{s.desc}</p>
+                  </div>
+                  <span className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full text-xs sm:text-sm transition-transform group-hover:rotate-45 bg-[#f5f2ec] border border-[#d4cfc5] text-[#3d3828] shrink-0" aria-hidden="true">
+                    ↗
+                  </span>
+                </motion.div>
+              )
             ))}
           </div>
         </div>
@@ -1983,7 +2046,11 @@ export default function ModernSite({ onSwitchToTerminal }) {
         </motion.div>
       </motion.section>
 
-      <SiteCursorOverlay whyClipRef={whyLensClipRef} lensDesktopEnabled={lensDesktopEnabled} />
+      <SiteCursorOverlay
+        whyClipRef={whyLensClipRef}
+        lensDesktopEnabled={lensDesktopEnabled}
+        scrollContainerRef={modernSnapScrollRef}
+      />
     </motion.div>
   );
 }

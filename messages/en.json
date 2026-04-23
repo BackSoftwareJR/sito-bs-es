@@ -59,12 +59,34 @@
     "subtitle": "Concrete solutions for real problems.",
     "caseFamiglia": {
       "title": "Family Homes",
-      "desc": "Complete packages for facilities hosting families in need.",
-      "details": "Dedicated service for facilities hosting families in need. We manage everything: website, social media, targeted advertising campaigns and booking system.",
+      "desc": "Elder care homes: proprietary digital ecosystem and true end-to-end support.",
+      "details": "Family Homes are elder-care facilities that need serious organisation and tools. We support you from opening through day-to-day operations with bespoke proprietary software, hardware integration where it matters, and one interconnected digital ecosystem — not just another management system. Strategic partnership with Cristina Malvini, a leading consultant in the sector. Communication, processes and data working together: innovation that shows up in real operations.",
       "packages": {
         "6mesi": { "name": "6 Months", "desc": "Complete solution for 6 months: website, social, campaigns and bookings" },
         "3mesi": { "name": "3 Months", "desc": "Complete solution for 3 months: website, social, campaigns and bookings" },
         "spot": { "name": "Spot Campaign", "desc": "Spot campaign for 6 months with full management" }
+      },
+      "expand": {
+        "partner": "With Cristina Malvini · leading consultancy for Family Homes",
+        "slide0": "Elder-care facilities: we stay with you end-to-end, from launch planning to daily operations — with Cristina Malvini as our sector partner for grounded, expert guidance.",
+        "slide1": "More than «another CMS»: a proprietary ecosystem linking bespoke software, integrations and hardware where needed — designed as one interconnected stack.",
+        "slide2": "Real innovation: clear workflows, connected data, less friction. Built for operators in assisted living — aligned with Cristina Malvini’s strategic vision.",
+        "cta": "Learn more",
+        "hint": "Service detail & roadmap",
+        "pillA": "360° · launch to daily ops",
+        "pillB": "Integrated hardware + software",
+        "prevLeft": "Previous image — left gallery",
+        "nextLeft": "Next image — left gallery",
+        "prevRight": "Previous image — right gallery",
+        "nextRight": "Next image — right gallery",
+        "prev": "Previous image",
+        "next": "Next image",
+        "imageAlt0": "Welcoming interior of an elder-care residence",
+        "imageAlt1": "Bright, organised communal space",
+        "imageAlt2": "Architecture and thoughtful detail in the facility",
+        "imageAlt3": "Welcoming spaces designed for calm and care",
+        "imageAlt4": "Bright interior focused on wellbeing",
+        "imageAlt5": "Comfort details throughout the residence"
       }
     },
     "sitiLanding": {
@@ -331,6 +353,7 @@
       "loading": "BOOTING SYSTEM..."
     },
     "apps": {
+      "tablistLabel": "Select an app",
       "oracle": "MAGIC ORACLE",
       "slot": "PRIZE SLOT",
       "excuse": "EXCUSES",

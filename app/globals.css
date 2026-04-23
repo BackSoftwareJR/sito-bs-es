@@ -266,6 +266,17 @@ html.site-system-cursor-off * {
   cursor: none !important;
 }
 
+@keyframes terminal-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
 .modern-snap-container {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
