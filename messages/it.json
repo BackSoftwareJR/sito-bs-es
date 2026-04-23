@@ -141,23 +141,35 @@
       "title": "Il nostro metodo.",
       "subtitle": "Dalla prima analisi al rilascio, lavoriamo con un processo chiaro e condiviso.",
       "kicker": "PROCESSO UX/UI",
+      "timelineLabel": "Roadmap di lavoro",
       "stepLabel": "Step {{step}}",
       "footerNote": "Un processo solido riduce sprechi, accelera le decisioni e migliora la qualità del risultato.",
       "forecastKicker": "Previsione",
       "forecastTitle": "Cosa puoi aspettarti, in modo realistico.",
       "forecastSubtitle": "Prima di partire definiamo obiettivi, indicatori e una traiettoria di miglioramento concreta.",
+      "outcomes": [
+        "Priorità allineate e piano operativo condiviso.",
+        "Esperienza utente più chiara e più orientata alla conversione.",
+        "Iterazioni continue basate su dati e feedback reali."
+      ],
       "cta": "Parlaci del tuo progetto",
       "analysis": {
         "title": "Analisi",
-        "desc": "Partiamo dai tuoi obiettivi, dal contesto e dai vincoli reali per definire le priorità giuste."
+        "desc": "Partiamo dai tuoi obiettivi, dal contesto e dai vincoli reali per definire le priorità giuste.",
+        "meta": "Obiettivi, vincoli, baseline",
+        "deliverable": "Output: mappa priorità + piano di lavoro"
       },
       "design": {
         "title": "Progettazione",
-        "desc": "Traduciamo la strategia in struttura, contenuti e sviluppo: tutto orientato a usabilità e risultati."
+        "desc": "Traduciamo la strategia in struttura, contenuti e sviluppo: tutto orientato a usabilità e risultati.",
+        "meta": "UX/UI, contenuti, architettura",
+        "deliverable": "Output: struttura validata e prototipo operativo"
       },
       "launch": {
         "title": "Rilascio & crescita",
-        "desc": "Pubblicazione, monitoraggio e ottimizzazione continua per migliorare performance e conversioni."
+        "desc": "Pubblicazione, monitoraggio e ottimizzazione continua per migliorare performance e conversioni.",
+        "meta": "Monitoraggio, test, ottimizzazione",
+        "deliverable": "Output: roadmap di miglioramento continuo"
       }
     }
   },

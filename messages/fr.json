@@ -62,23 +62,35 @@
       "subtitle": "Une méthode simple : analyser, construire, améliorer en continu.",
       "eyebrow": "PROCESSUS",
       "kicker": "UX PROCESS",
+      "timelineLabel": "Ligne opérationnelle",
       "stepLabel": "ÉTAPE {{step}}",
       "footerNote": "Objectif : avancer avec une vision claire, des choix partagés et des livrables mesurables.",
       "forecastKicker": "Prévision",
       "forecastTitle": "Ce que vous pouvez attendre du projet",
       "forecastSubtitle": "Chaque travail suit ce cadre : vision, périmètre utile et croissance progressive.",
+      "outcomes": [
+        "Priorités alignées entre business, contenu et produit.",
+        "Feuille de route exécutable avec objectifs concrets.",
+        "Cadre de mesure pour itérer sans perdre le cap."
+      ],
       "cta": "Parlons de votre projet",
       "analysis": {
         "title": "Analyse",
-        "desc": "Nous partons de vos objectifs réels, de vos processus actuels et des résultats attendus."
+        "desc": "Nous partons de vos objectifs réels, de vos processus actuels et des résultats attendus.",
+        "meta": "Contexte",
+        "deliverable": "Livrable : synthèse des besoins, contraintes et indicateurs de départ."
       },
       "design": {
         "title": "Conception",
-        "desc": "Nous définissons la solution la plus utile pour vous : claire, mesurable et durable."
+        "desc": "Nous définissons la solution la plus utile pour vous : claire, mesurable et durable.",
+        "meta": "Architecture",
+        "deliverable": "Livrable : structure du parcours, contenus clés et plan d’exécution."
       },
       "launch": {
         "title": "Lancement & optimisation",
-        "desc": "Nous mettons en ligne, mesurons les performances et améliorons avec des interventions ciblées."
+        "desc": "Nous mettons en ligne, mesurons les performances et améliorons avec des interventions ciblées.",
+        "meta": "Performance",
+        "deliverable": "Livrable : publication, suivi des signaux et plan d’optimisation continue."
       }
     },
     "caseFamiglia": {
