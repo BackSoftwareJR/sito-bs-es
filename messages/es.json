@@ -57,6 +57,30 @@
   "services": {
     "title": "Qué hacemos.",
     "subtitle": "Soluciones concretas para problemas reales.",
+    "workflow": {
+      "title": "Nuestro método.",
+      "eyebrow": "Proceso UX/UI",
+      "kicker": "Del análisis a la ejecución, con decisiones guiadas por datos y objetivos.",
+      "subtitle": "Tres pasos claros para convertir una idea en un resultado medible.",
+      "stepLabel": "Etapa {{step}}",
+      "forecastKicker": "Previsión de impacto",
+      "forecastTitle": "Qué puedes esperar en las primeras semanas.",
+      "forecastSubtitle": "Cada proyecto cambia según sector y punto de partida, pero este es el marco operativo que usamos para medir avances reales.",
+      "footerNote": "Objetivo: reducir incertidumbre, acelerar decisiones y crear una base sólida de crecimiento.",
+      "cta": "Hablemos de tu proyecto",
+      "analysis": {
+        "title": "Escuchamos y analizamos",
+        "desc": "Partimos de tus objetivos y del contexto real de tu negocio para definir prioridades concretas."
+      },
+      "design": {
+        "title": "Diseñamos y desarrollamos",
+        "desc": "Construimos una solución a medida, cuidando experiencia, rendimiento y simplicidad de uso."
+      },
+      "launch": {
+        "title": "Lanzamos y optimizamos",
+        "desc": "Publicamos el proyecto, seguimos los resultados y mejoramos de forma continua junto a tu equipo."
+      }
+    },
     "caseFamiglia": {
       "title": "Hogares Familiares",
       "desc": "Residencias para mayores: ecosistema digital propio y acompañamiento integral.",

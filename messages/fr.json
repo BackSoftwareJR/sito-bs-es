@@ -57,6 +57,30 @@
   "services": {
     "title": "Ce que nous faisons.",
     "subtitle": "Des solutions concrètes pour des problèmes réels.",
+    "workflow": {
+      "title": "Comment nous opérons.",
+      "subtitle": "Une méthode simple : analyser, construire, améliorer en continu.",
+      "eyebrow": "PROCESSUS",
+      "kicker": "UX PROCESS",
+      "stepLabel": "ÉTAPE {{step}}",
+      "footerNote": "Objectif : avancer avec une vision claire, des choix partagés et des livrables mesurables.",
+      "forecastKicker": "Prévision",
+      "forecastTitle": "Ce que vous pouvez attendre du projet",
+      "forecastSubtitle": "Chaque travail suit ce cadre : vision, périmètre utile et croissance progressive.",
+      "cta": "Parlons de votre projet",
+      "analysis": {
+        "title": "Analyse",
+        "desc": "Nous partons de vos objectifs réels, de vos processus actuels et des résultats attendus."
+      },
+      "design": {
+        "title": "Conception",
+        "desc": "Nous définissons la solution la plus utile pour vous : claire, mesurable et durable."
+      },
+      "launch": {
+        "title": "Lancement & optimisation",
+        "desc": "Nous mettons en ligne, mesurons les performances et améliorons avec des interventions ciblées."
+      }
+    },
     "caseFamiglia": {
       "title": "Foyers Familiaux",
       "desc": "Structures pour seniors : écosystème numérique propriétaire et accompagnement 360°.",

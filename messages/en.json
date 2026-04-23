@@ -136,6 +136,30 @@
         "app": { "name": "Applications", "desc": "Custom web and mobile applications" },
         "api": { "name": "API Connection", "desc": "Integrations and API connections with other services" }
       }
+    },
+    "workflow": {
+      "title": "Our method.",
+      "subtitle": "A clear process, from first analysis to delivery and support.",
+      "eyebrow": "From strategy to execution",
+      "kicker": "Designed to reduce uncertainty and speed up decision making.",
+      "stepLabel": "Step {{step}}",
+      "forecastKicker": "Data-driven outlook",
+      "forecastTitle": "Strategic forecast",
+      "forecastSubtitle": "After analysis, we define realistic growth hypotheses and the key actions to validate.",
+      "footerNote": "Every project starts from your objectives and evolves with measurable iterations.",
+      "cta": "Talk about your project",
+      "analysis": {
+        "title": "Analysis",
+        "desc": "We understand goals, constraints, and priorities to define the right solution."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "We design structure and execution plan with you, without unnecessary complexity."
+      },
+      "launch": {
+        "title": "Launch & Growth",
+        "desc": "We release, monitor results, and optimize continuously based on real data."
+      }
     }
   },
   "projects": {

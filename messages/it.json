@@ -136,6 +136,29 @@
         "app": { "name": "Applicazioni", "desc": "Applicazioni web e mobile su misura" },
         "api": { "name": "Collegamento API", "desc": "Integrazioni e collegamenti API con altri servizi" }
       }
+    },
+    "workflow": {
+      "title": "Il nostro metodo.",
+      "subtitle": "Dalla prima analisi al rilascio, lavoriamo con un processo chiaro e condiviso.",
+      "kicker": "PROCESSO UX/UI",
+      "stepLabel": "Step {{step}}",
+      "footerNote": "Un processo solido riduce sprechi, accelera le decisioni e migliora la qualità del risultato.",
+      "forecastKicker": "Previsione",
+      "forecastTitle": "Cosa puoi aspettarti, in modo realistico.",
+      "forecastSubtitle": "Prima di partire definiamo obiettivi, indicatori e una traiettoria di miglioramento concreta.",
+      "cta": "Parlaci del tuo progetto",
+      "analysis": {
+        "title": "Analisi",
+        "desc": "Partiamo dai tuoi obiettivi, dal contesto e dai vincoli reali per definire le priorità giuste."
+      },
+      "design": {
+        "title": "Progettazione",
+        "desc": "Traduciamo la strategia in struttura, contenuti e sviluppo: tutto orientato a usabilità e risultati."
+      },
+      "launch": {
+        "title": "Rilascio & crescita",
+        "desc": "Pubblicazione, monitoraggio e ottimizzazione continua per migliorare performance e conversioni."
+      }
     }
   },
   "projects": {
