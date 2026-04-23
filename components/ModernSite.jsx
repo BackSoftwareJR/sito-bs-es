@@ -1733,11 +1733,18 @@ export default function ModernSite({ onSwitchToTerminal }) {
       <motion.section
         id="metodo"
         variants={itemVariants}
-        className="modern-snap-section flex min-h-0 flex-col justify-center px-4 sm:px-6 lg:px-10 py-14 sm:py-20"
+        className="modern-snap-section relative flex min-h-0 flex-col justify-center px-4 sm:px-6 lg:px-10 py-14 sm:py-20 overflow-hidden"
       >
+        <div className="pointer-events-none absolute -top-16 right-[8%] w-64 h-64 rounded-full opacity-[0.18] blur-3xl" style={{ background: 'radial-gradient(circle, rgba(196,180,148,0.5) 0%, rgba(196,180,148,0) 70%)' }} />
+        <div className="pointer-events-none absolute -bottom-24 left-[6%] w-72 h-72 rounded-full opacity-[0.14] blur-3xl" style={{ background: 'radial-gradient(circle, rgba(124,111,91,0.46) 0%, rgba(124,111,91,0) 70%)' }} />
         <div className="mx-auto w-full max-w-6xl">
-          <div className="clay-card p-6 sm:p-10 lg:p-12">
-            <motion.div variants={itemVariants} className="mb-7 sm:mb-9 space-y-2 sm:space-y-3">
+          <div className="clay-card relative p-6 sm:p-10 lg:p-12 border border-[#d9d0c2]/70 bg-[linear-gradient(138deg,#f9f6ef_0%,#f3eee3_45%,#f8f4ea_100%)]">
+            <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-[linear-gradient(90deg,transparent_0%,rgba(196,180,148,0.8)_50%,transparent_100%)]" />
+            <motion.div variants={itemVariants} className="mb-7 sm:mb-9 space-y-3 sm:space-y-4">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#d3c8b8] bg-[#efe7d9] px-3 py-1 text-[10px] sm:text-xs font-black tracking-[0.16em] uppercase text-[#6a6050]">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#7c6f5b]" />
+                {t('services.workflow.kicker')}
+              </span>
               <motion.h2 {...sectionTitleReveal} className={`${sectionTitleClass} text-[#2d2818]`}>
                 {t('services.workflow.title')}
               </motion.h2>
@@ -1746,20 +1753,46 @@ export default function ModernSite({ onSwitchToTerminal }) {
               </motion.p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
-              {workflowSteps.map((step) => (
+            <div className="relative">
+              <div className="pointer-events-none hidden md:block absolute left-0 right-0 top-[26px] h-px bg-[linear-gradient(90deg,rgba(124,111,91,0.15)_0%,rgba(124,111,91,0.35)_50%,rgba(124,111,91,0.15)_100%)]" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+              {workflowSteps.map((step, index) => (
                 <motion.article
                   key={step.key}
                   variants={itemVariants}
-                  className="rounded-3xl border border-[#d8d1c4] bg-[linear-gradient(145deg,#fdfcf9_0%,#f5f0e7_100%)] p-5 sm:p-6"
+                  whileHover={{ y: -5, scale: 1.01 }}
+                  transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  className="group relative rounded-3xl border border-[#d8d1c4] bg-[linear-gradient(145deg,#fffdf9_0%,#f4efe4_100%)] p-5 sm:p-6 shadow-[0_10px_24px_rgba(61,56,40,0.08)]"
                 >
-                  <span className="inline-flex px-3 py-1 rounded-full text-xs font-black tracking-[0.12em] bg-[#e8e1d3] text-[#5a5142] mb-4">
-                    {step.number}
-                  </span>
+                  <div className="pointer-events-none absolute inset-x-5 top-0 h-px opacity-0 group-hover:opacity-100 transition-opacity bg-[linear-gradient(90deg,transparent_0%,rgba(196,180,148,0.9)_50%,transparent_100%)]" />
+                  <div className="mb-4 flex items-center justify-between">
+                    <span className="inline-flex px-3 py-1 rounded-full text-xs font-black tracking-[0.12em] bg-[#e8e1d3] text-[#5a5142]">
+                      {step.number}
+                    </span>
+                    <span className="text-[11px] font-black uppercase tracking-[0.14em] text-[#93866f]">
+                      {t('services.workflow.stepLabel', { step: index + 1 })}
+                    </span>
+                  </div>
                   <h3 className="text-lg sm:text-xl font-black text-[#2d2818] mb-2 leading-tight">{step.title}</h3>
                   <p className="text-sm sm:text-base text-[#6a6050] leading-relaxed">{step.desc}</p>
                 </motion.article>
               ))}
+              </div>
+            </div>
+
+            <div className="mt-7 sm:mt-9 pt-6 border-t border-[#d8d0c2] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <p className="text-sm sm:text-base font-semibold text-[#6a6050]">
+                {t('services.workflow.footerNote')}
+              </p>
+              <ShinyButton
+                href="#contatti"
+                tone="espresso"
+                size="md"
+                intensity="strong"
+                className="font-bold !text-sm !px-5 !py-3"
+              >
+                {t('services.workflow.cta')}
+              </ShinyButton>
             </div>
           </div>
         </div>

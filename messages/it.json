@@ -140,6 +140,8 @@
     "workflow": {
       "title": "Il nostro metodo.",
       "subtitle": "Dalla prima analisi al rilascio, lavoriamo con un processo chiaro e condiviso.",
+      "eyebrow": "PROCESSO",
+      "cta": "Parlaci del tuo progetto",
       "analysis": {
         "title": "Analisi",
         "desc": "Partiamo dai tuoi obiettivi, dal contesto e dai vincoli reali per definire le priorità giuste."

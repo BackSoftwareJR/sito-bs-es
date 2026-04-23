@@ -60,6 +60,8 @@
     "workflow": {
       "title": "Comment nous opérons.",
       "subtitle": "Une méthode simple : analyser, construire, améliorer en continu.",
+      "kicker": "UX PROCESS",
+      "cta": "Parlons de votre projet",
       "analysis": {
         "title": "Analyse",
         "desc": "Nous partons de vos objectifs réels, de vos processus actuels et des résultats attendus."

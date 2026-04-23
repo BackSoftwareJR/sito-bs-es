@@ -59,7 +59,9 @@
     "subtitle": "Soluciones concretas para problemas reales.",
     "workflow": {
       "title": "Nuestro método.",
+      "eyebrow": "Proceso UX/UI",
       "subtitle": "Tres pasos claros para convertir una idea en un resultado medible.",
+      "cta": "Hablemos de tu proyecto",
       "analysis": {
         "title": "Escuchamos y analizamos",
         "desc": "Partimos de tus objetivos y del contexto real de tu negocio para definir prioridades concretas."
