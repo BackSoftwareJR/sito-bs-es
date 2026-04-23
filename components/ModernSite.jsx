@@ -1841,7 +1841,6 @@ export default function ModernSite({ onSwitchToTerminal }) {
               </div>
             </div>
           </div>
-        </div>
       </motion.section>
 
       {/* ── PROGETTI Section (DARK) ── */}
